@@ -10,21 +10,22 @@ L’obiettivo non è fare subito il piano perfetto, ma creare una prima bozza di
 
 Questo è il prompt che uso per chiedere all’AI di propormi una struttura di base del progetto.
 
-**Prompt**  
-Sto progettando un’app web e mobile come un “taccuino di viaggio intelligente”.  
-L’app serve per raccogliere in un unico posto tutte le idee per i miei viaggi di piacere: destinazioni, percorsi, curiosità, recensioni, budget e costi.  
-
-Voglio lavorare in stile “vibe coding”: io descrivo le intenzioni in italiano semplice e tu mi aiuti a trasformarle in tappe concrete di lavoro.  
- 
-Per favore:  
-1. Proponimi una lista di 6–10 milestone (tappe) per arrivare da “idea grezza” a “prima versione usabile” dell’app.  
-2. Per ogni milestone, dammi:  
-    - un titolo breve  
-    - una descrizione in massimo 3 righe  
-    - cosa devo considerare “fatto” per poterla spuntare.  
- 3. Usa un linguaggio comprensibile anche a chi non è sviluppatore.  
-
- 4. Non scrivere ancora codice: resta a livello di organizzazione del lavoro.
+>**Prompt**  
+>Sto progettando un’app web e mobile come un “taccuino di viaggio intelligente”.  
+>L’app serve per raccogliere in un unico posto tutte le idee per i miei viaggi di piacere: destinazioni, percorsi, curiosità, recensioni, budget e costi.  
+>
+>Voglio lavorare in stile “vibe coding”: io descrivo le intenzioni in italiano semplice e tu mi aiuti a trasformarle in tappe concrete di lavoro.  
+> 
+>Per favore:  
+>1. Proponimi una lista di 6–10 milestone (tappe) per arrivare da “idea grezza” a “prima versione usabile” dell’app.  
+>2. Per ogni milestone, dammi:  
+>    - un titolo breve  
+>    - una descrizione in massimo 3 righe  
+>    - cosa devo considerare “fatto” per poterla spuntare.  
+> 3. Usa un linguaggio comprensibile anche a chi non è sviluppatore.  
+>
+> 4. Non scrivere ancora codice: resta a livello di organizzazione del lavoro.
+>
 
 ## Output 1 – Roadmap proposta da Qwen (18/06/2026)
 
