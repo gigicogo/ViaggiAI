@@ -79,21 +79,21 @@ Vuoi che approfondiamo insieme la prima milestone per definire meglio le funzion
 
 ## Prompt 2 – Semplificare e rinominare le milestone
 
-Una volta ottenuta la prima proposta, voglio rendere il piano ancora più leggibile per un pubblico non tecnico.
-
 > **Prompt**  
-> Ecco la lista di milestone che mi hai proposto (incollo sotto la tua risposta).  
+> Qui sotto trovi la roadmap che mi hai proposto per il progetto “ViaggiAI”, con 10 milestone che vanno dall’idea al lancio della versione alpha.  
 > 
-> Ti chiedo di semplificarla:  
-> 1. Riduci le milestone a un massimo di 6, raggruppando quelle troppo simili.  
-> 2. Rinomina ogni milestone con un titolo molto chiaro, come se dovesse essere compreso da un lettore curioso ma non tecnico.  
-> 3. Per ogni milestone, mantieni:  
->    - un titolo breve  
->    - una descrizione in massimo 2 righe  
->    - cosa consideriamo “fatto” in una sola frase.  
-> 4. Restituisci il risultato in forma di elenco numerato.
-
-Anche qui, sotto il prompt incollerò la nuova versione della lista di milestone.
+> Ti chiedo di aiutarmi a semplificarla e renderla ancora più leggibile per un pubblico non tecnico, mantenendo però lo spirito originale.  
+> 
+> Istruzioni:  
+> 1. Riduci le milestone a un massimo di 6 tappe, raggruppando insieme quelle che appartengono alla stessa fase del viaggio (es. progettazione, prototipo, test, lancio).  
+> 2. Per ogni nuova milestone:  
+>    - scegli un **titolo breve e molto chiaro**, comprensibile anche a chi non ha mai fatto project management  
+>    - scrivi una **descrizione in massimo 3 righe** che spieghi cosa succede in quella tappa  
+>    - definisci **“Fatto quando:”** in UNA sola frase concreta, usando esempi vicini all’uso reale dell’app (es. “posso creare un viaggio e rivederlo domani”).  
+> 3. Mantieni lo stile pratico e motivante della roadmap originale, ma evita termini troppo tecnici.  
+> 4. Restituisci il risultato in forma di elenco numerato (Milestone 1, 2, 3, …).  
+> 
+> Sotto incollerò la roadmap originale, così puoi basarti su quella per fare la sintesi.
 
 ---
 
