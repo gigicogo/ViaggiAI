@@ -51,11 +51,11 @@ Collega gli schizzi tra loro creando un flusso cliccabile (anche solo immagini c
 Decidi se usare strumenti no-code (Bubble, Glide, Adalo) o sviluppare da zero. Considera budget, tempo e competenze.  
 **Fatto quando:** Hai scelto la piattaforma/tecnologia e creato un account di prova funzionante.
 
-## **Milestone 6: Prima Funzione Costruita**
+**Milestone 6: Prima Funzione Costruita**
 Implementa UNA sola funzione completa: ad esempio "aggiungere una nuova destinazione con nome e foto". Deve funzionare davvero, salvare i dati e mostrarli.  
 **Fatto quando:** Puoi creare un viaggio, salvarlo, vederlo nella lista e aprirlo di nuovo.
 
-## **Milestone 7: Gestione Budget Base**
+**Milestone 7: Gestione Budget Base**
 Aggiungi la possibilità di inserire spese per ogni viaggio e vedere il totale speso vs budget previsto.  
 **Fatto quando:** Puoi aggiungere almeno 3 spese a un viaggio e vedere il calcolo automatico del totale.
 
@@ -63,7 +63,7 @@ Aggiungi la possibilità di inserire spese per ogni viaggio e vedere il totale s
 Fai provare l'app a 2-3 amici fidati. Chiedi loro di completare un compito specifico (es. "crea un viaggio a Parigi") e osserva dove si bloccano.  
 **Fatto quando:** Hai raccolto feedback da almeno 2 persone e identificato 3-5 problemi da risolvere.
 
-## **Milestone 9: Rifinitura Essenziale**
+**Milestone 9: Rifinitura Essenziale**
 Correggi i problemi emersi dai test, migliora testi confusi, aggiusta layout scomodi. Non cercare la perfezione, solo l'usabilità.  
 **Fatto quando:** Gli stessi tester riescono a usare l'app senza chiederti spiegazioni.
 
