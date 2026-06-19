@@ -166,8 +166,6 @@ Ecco la scomposizione operativa delle 6 milestone in task tracciabili su GitHub,
    **Descrizione:** Installa tutte le dipendenze necessarie, configura linter/formatter e verifica che il progetto giri localmente senza errori. Aggiungi un file `.env.example` e istruzioni di setup nel README per garantire riproducibilità.  
    **Tipo:** Infrastruttura / DevOps  
 
----
-
 ### Milestone 2: Design e Flusso Utente
 **Nome milestone GitHub:** `M2-Design-Flusso`  
 **Prefisso branch:** `m2-design/`
@@ -183,8 +181,6 @@ Ecco la scomposizione operativa delle 6 milestone in task tracciabili su GitHub,
 3. **Titolo:** Validare flusso con walkthrough interno  
    **Descrizione:** Esegui tu stesso il flusso completo nel prototipo verificando che non ci siano vicoli ciechi o passaggi illogici. Documenta eventuali incongruenze emerse e correggi gli schizzi prima di passare allo sviluppo.  
    **Tipo:** Design / QA  
-
----
 
 ### Milestone 3: Core Funzionante (CRUD)
 **Nome milestone GitHub:** `M3-Core-CRUD`  
@@ -210,8 +206,6 @@ Ecco la scomposizione operativa delle 6 milestone in task tracciabili su GitHub,
    **Descrizione:** Verifica manualmente che sia possibile creare un viaggio, vederlo nella lista, aprirlo, modificarlo e salvare senza errori. Documenta il test con screenshot o breve video come prova di completamento.  
    **Tipo:** Test / QA  
 
----
-
 ### Milestone 4: Gestione Budget e Spese
 **Nome milestone GitHub:** `M4-Budget-Spese`  
 **Prefisso branch:** `m4-budget/`
@@ -231,8 +225,6 @@ Ecco la scomposizione operativa delle 6 milestone in task tracciabili su GitHub,
 4. **Titolo:** Test scenario budget con multiple spese  
    **Descrizione:** Aggiungi almeno 3 spese diverse a un viaggio e verifica che il calcolo sia corretto e si aggiorni ad ogni aggiunta/modifica/cancellazione. Testa anche il caso limite di budget esaurito e superato.  
    **Tipo:** Test / QA  
-
----
 
 ### Milestone 5: Test e Rifinitura Usabilità
 **Nome milestone GitHub:** `M5-Test-Rifinitura`  
@@ -257,8 +249,6 @@ Ecco la scomposizione operativa delle 6 milestone in task tracciabili su GitHub,
 5. **Titolo:** Verifica usabilità post-fix con stessi tester  
    **Descrizione:** Fai rieseguire gli stessi compiti agli stessi tester per confermare che i problemi siano risolti e non ne siano emersi di nuovi. La milestone si chiude solo quando completano il flusso senza domande.  
    **Tipo:** Test / Validazione  
-
----
 
 ### Milestone 6: Lancio Alpha Esterno
 **Nome milestone GitHub:** `M6-Lancio-Alpha`  
