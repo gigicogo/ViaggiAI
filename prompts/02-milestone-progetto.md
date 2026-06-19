@@ -97,6 +97,34 @@ Vuoi che approfondiamo insieme la prima milestone per definire meglio le funzion
 
 ---
 
+## Output 2 – Milestone sintetizzate da Qwen (19/06/2026)
+
+Ecco la roadmap essenziale di ViaggiAI, condensata in 6 milestone operative:
+
+**Milestone 1: Definizione e Architettura**  
+Unisci la scelta delle funzionalità core, la struttura dei dati necessari e la selezione degli strumenti tecnici (no-code o sviluppo custom). Questo crea le fondamenta solide su cui costruire senza dover tornare indietro per decisioni strutturali.  
+**Fatto quando:** Hai un documento con le 5 funzioni prioritarie, l'elenco dei dati da salvare per ogni viaggio e l'ambiente di sviluppo configurato e pronto all'uso.
+
+**Milestone 2: Design e Flusso Utente**  
+Crea gli schizzi delle schermate principali (home, dettaglio, aggiunta nota) e collegali in un prototipo navigabile che simuli l'esperienza reale, anche se solo graficamente. Serve a validare la logica di navigazione prima di scrivere codice.  
+**Fatto quando:** Puoi cliccare attraverso gli schizzi per completare un intero flusso, dall'apertura dell'app alla creazione di un nuovo viaggio, senza blocchi logici.
+
+**Milestone 3: Core Funzionante (CRUD)**  
+Sviluppa la funzione base di creazione e gestione dei viaggi: l'utente deve poter inserire una destinazione, salvarla nel database, vederla nella lista e riaprirla per modificarla. È il cuore pulsante dell'applicazione.  
+**Fatto quando:** Posso creare un nuovo viaggio con titolo e foto, salvarlo, ritrovarlo nella home e aprirlo nuovamente senza errori.
+
+**Milestone 4: Gestione Budget e Spese**  
+Implementa la logica finanziaria permettendo di impostare un budget totale e aggiungere singole spese con calcolo automatico del residuo. Questa è la seconda funzionalità distintiva rispetto a una semplice lista di desideri.  
+**Fatto quando:** Posso aggiungere almeno 3 spese diverse a un viaggio e vedere il sistema aggiornare automaticamente il totale speso e il budget rimanente.
+
+**Milestone 5: Test e Rifinitura Usabilità**  
+Fai provare l'app a 2-3 amici chiedendo loro di eseguire compiti specifici, poi usa i feedback per correggere bug, chiarire testi confusi e migliorare i layout scomodi. L'obiettivo è rendere l'app intuitiva senza bisogno di spiegazioni.  
+**Fatto quando:** I tester riescono a creare un viaggio e gestire il budget da soli, senza farmi domande su come procedere.
+
+**Milestone 6: Lancio Alpha Esterno**  
+Rendi l'app accessibile pubblicamente (via link web o store) a un gruppo più ampio di utenti esterni al tuo circolo stretto per raccogliere feedback su scala leggermente maggiore. Segna il passaggio da progetto personale a prodotto utilizzabile.  
+**Fatto quando:** Almeno 5 persone esterne hanno registrato un account o usato l'app e mi hanno inviato un feedback strutturato.
+
 ## Prompt 3 – Collegare le milestone all’articolo e al repository
 
 Infine, voglio che le milestone siano collegate sia all’articolo che al laboratorio su GitHub.
