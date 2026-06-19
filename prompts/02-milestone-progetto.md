@@ -77,23 +77,23 @@ Vuoi che approfondiamo insieme la prima milestone per definire meglio le funzion
 
 ---
 
-## Prompt 2 – Semplificare e rinominare le milestone
+## Prompt 2 – Sintesi e raggruppamento delle milestone
 
 > **Prompt**  
-> Qui sotto trovi la roadmap che mi hai proposto per il progetto “ViaggiAI”, con 10 milestone che vanno dall’idea al lancio della versione alpha.  
+> Qui sotto trovi la roadmap che mi hai generato per il progetto “ViaggiAI”, con 10 milestone che vanno dall’idea al lancio.  
 > 
-> Ti chiedo di aiutarmi a semplificarla e renderla ancora più leggibile per un pubblico non tecnico, mantenendo però lo spirito originale.  
+> Ora voglio una versione più essenziale, utile per guidare davvero lo sviluppo dell’app.  
 > 
-> Istruzioni:  
-> 1. Riduci le milestone a un massimo di 6 tappe, raggruppando insieme quelle che appartengono alla stessa fase del viaggio (es. progettazione, prototipo, test, lancio).  
+> Istruzioni operative:  
+> 1. Riduci le milestone a **massimo 6**, raggruppando quelle che appartengono alla stessa fase (es. definizione, design, prototipo, sviluppo funzionalità, test, lancio).  
 > 2. Per ogni nuova milestone:  
->    - scegli un **titolo breve e molto chiaro**, comprensibile anche a chi non ha mai fatto project management  
->    - scrivi una **descrizione in massimo 3 righe** che spieghi cosa succede in quella tappa  
->    - definisci **“Fatto quando:”** in UNA sola frase concreta, usando esempi vicini all’uso reale dell’app (es. “posso creare un viaggio e rivederlo domani”).  
-> 3. Mantieni lo stile pratico e motivante della roadmap originale, ma evita termini troppo tecnici.  
-> 4. Restituisci il risultato in forma di elenco numerato (Milestone 1, 2, 3, …).  
+>    - assegna un **titolo breve e descrittivo**, utile da usare anche come nome di branch o etichetta nel project management  
+>    - scrivi una **descrizione in 2–3 frasi** focalizzata su cosa deve essere concretamente completato  
+>    - definisci un chiaro criterio **“Fatto quando:”** in UNA sola frase verificabile (es.: “posso creare un viaggio, salvarlo e riaprirlo”).  
+> 3. Mantieni l’ordine logico di esecuzione: dalla definizione dell’app fino a una prima versione utilizzabile da tester esterni.  
+> 4. Restituisci il risultato in elenco numerato (Milestone 1, 2, 3, …).  
 > 
-> Sotto incollerò la roadmap originale, così puoi basarti su quella per fare la sintesi.
+> Sotto questo prompt incollerò la roadmap originale a 10 milestone: usala come base per la sintesi, senza aggiungere nuove idee non presenti lì.
 
 ---
 
