@@ -280,6 +280,7 @@ Ecco la scomposizione operativa delle 6 milestone in task tracciabili su GitHub,
    **Descrizione:** Sintetizza in un documento interno i feedback ricevuti, le metriche di utilizzo e le lezioni apprese. Definisci le priorità per la prossima iterazione basandoti sui dati reali, non sulle ipotesi.  
    **Tipo:** Documentazione / Planning  
 
+
 Nota pratica per il vibe coding: non creare tutte le issue subito. Apri quelle della Milestone 1 ora, e crea le successive solo quando la milestone corrente è al 70–80% completata. Questo mantiene il backlog pulito e ti permette di adattare i task in base a ciò che impari strada facendo.
 
 ---
