@@ -95,8 +95,6 @@ Vuoi che approfondiamo insieme la prima milestone per definire meglio le funzion
 > 
 > Sotto questo prompt incollerò la roadmap originale a 10 milestone: usala come base per la sintesi, senza aggiungere nuove idee non presenti lì.
 
----
-
 ## Output 2 – Milestone sintetizzate da Qwen (19/06/2026)
 
 Ecco la roadmap essenziale di ViaggiAI, condensata in 6 milestone operative:
