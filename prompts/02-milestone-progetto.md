@@ -73,8 +73,6 @@ Rendi l'app accessibile ad altri oltre ai tester iniziali (condividi link, pubbl
 
 **Consiglio vibe coding:** Lavora su una milestone alla volta. Quando ne completi una, festeggia! 🎉 Poi passa alla successiva. Non saltare passaggi: ogni tappa costruisce le fondamenta per quella dopo.
 
-Vuoi che approfondiamo insieme la prima milestone per definire meglio le funzionalità core?
-
 ---
 
 ## Prompt 2 – Sintesi e raggruppamento delle milestone
@@ -93,7 +91,6 @@ Vuoi che approfondiamo insieme la prima milestone per definire meglio le funzion
 > 3. Mantieni l’ordine logico di esecuzione: dalla definizione dell’app fino a una prima versione utilizzabile da tester esterni.  
 > 4. Restituisci il risultato in elenco numerato (Milestone 1, 2, 3, …).  
 > 
-> Sotto questo prompt incollerò la roadmap originale a 10 milestone: usala come base per la sintesi, senza aggiungere nuove idee non presenti lì.
 
 ## Output 2 – Milestone sintetizzate da Qwen (19/06/2026)
 
