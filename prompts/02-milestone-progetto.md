@@ -123,23 +123,29 @@ Fai provare l'app a 2-3 amici chiedendo loro di eseguire compiti specifici, poi 
 Rendi l'app accessibile pubblicamente (via link web o store) a un gruppo più ampio di utenti esterni al tuo circolo stretto per raccogliere feedback su scala leggermente maggiore. Segna il passaggio da progetto personale a prodotto utilizzabile.  
 **Fatto quando:** Almeno 5 persone esterne hanno registrato un account o usato l'app e mi hanno inviato un feedback strutturato.
 
-## Prompt 3 – Collegare le milestone all’articolo e al repository
-
-Infine, voglio che le milestone siano collegate sia all’articolo che al laboratorio su GitHub.
+## Prompt 3 – Tradurre le milestone in lavoro operativo (issue / task)
 
 > **Prompt**  
-> Abbiamo definito la lista finale di milestone per il progetto “ViaggiAI”.  
-> Ora ti chiedo di:  
-> 1. Per ogni milestone, suggerire in una riga che tipo di contenuto potrei mostrare:  
->    - nell’articolo (es.: spiegazione, screenshot, mini storia, ecc.)  
->    - nel repository GitHub (es.: file di prompt, cartella con screenshot, demo, ecc.).  
-> 2. Restituire il tutto in formato tabella Markdown con queste colonne:  
->    - Milestone  
->    - Cosa racconto nell’articolo  
->    - Cosa salvo nel repository.  
-> 3. Usa un linguaggio semplice e concreto.
-
-Questa tabella sarà la base per collegare in modo chiaro testo dell’articolo, prompt e file del repository.
+> Qui sotto trovi la versione sintetica delle 6 milestone operative per il progetto “ViaggiAI”.  
+> 
+> Ora voglio trasformarle in lavoro concreto da fare, organizzato in attività che posso tracciare in GitHub (issue, task, branch).  
+> 
+> Istruzioni operative:  
+> 1. Per ciascuna delle 6 milestone:  
+>    - proponi da 3 a 7 attività concrete (task) necessarie per completarla  
+>    - per ogni attività indica:  
+>      - un **titolo breve** (usabile come titolo di issue su GitHub)  
+>      - una **descrizione operativa** in 2–3 frasi, con cosa va fatto in pratica  
+>      - un tipo/area principale (es.: `design`, `frontend`, `backend`, `dati`, `test`, `documentazione`).  
+> 2. Per ogni milestone, suggerisci anche un **nome di milestone GitHub** e, se utile, un **prefisso di branch** (es.: `m1-definizione-architettura/`, `m3-core-crud/`).  
+> 3. Mantieni l’ordine logico delle milestone (dalla 1 alla 6), così posso usarle come base per creare milestone e issue direttamente nel repository.  
+> 4. Restituisci il risultato in formato strutturato, seguendo questo schema:  
+>    - Nome milestone  
+>    - Nome milestone GitHub suggerito  
+>    - Prefisso branch suggerito  
+>    - Elenco attività (con titolo, descrizione, tipo).  
+> 
+> Sotto questo prompt incollerò il testo aggiornato delle 6 milestone: usalo come unica fonte per generare attività e nomi, senza introdurre nuove milestone.
 
 ---
 
@@ -147,4 +153,4 @@ Questa tabella sarà la base per collegare in modo chiaro testo dell’articolo,
 
 - Questo file non è pensato per essere “perfetto”: è il diario di come il piano del progetto evolve mentre dialogo con l’AI.  
 - Ogni volta che ottengo una versione migliore della lista di milestone, posso aggiungerla qui sotto con la data, invece di cancellare la precedente.  
-- Il lettore potrà così vedere non solo il risultato finale, ma anche i passaggi intermedi.
+- Ciò consente di vedere non solo il risultato finale, ma anche i passaggi intermedi.
