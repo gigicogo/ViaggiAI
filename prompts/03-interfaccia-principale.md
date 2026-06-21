@@ -209,15 +209,15 @@ Quando questa versione ti convince, il passo successivo sarà la **Milestone 5 (
 > **Prompt**  
 >
 > Ora voglio ottimizzare ViaggiAI per l’uso su smartphone, senza cambiare lo stack (sempre singola pagina HTML con HTML/CSS/JavaScript e localStorage).
-
+>
 >Considera il codice attuale che ti ho fornito e applica SOLO miglioramenti di layout e stile per i dispositivi mobili:
-
+>
 > – Assicurati che tutti i testi siano leggibili su schermi piccoli (font size, spaziature, margini).
 > – Verifica che i pulsanti principali siano comodamente cliccabili con il pollice (dimensione minima consigliata e spaziatura tra i pulsanti).
 > – Evita scroll orizzontali: il contenuto deve adattarsi bene a schermi stretti.
 > – Migliora il comportamento delle liste (viaggi, spese, curiosità) su mobile, evitando che gli elementi risultino troppo affollati.
 > – Mantieni il “vibe” attuale (colori, stile delle cartoline, toast), solo più ottimizzato per il touch.
-
+>
 > Non introdurre nuove funzionalità: lavora solo su CSS e, se necessario, su piccole modifiche HTML.
 Mostrami:
 > 1) le nuove regole CSS aggiunte o modificate, con un breve commento
@@ -226,7 +226,7 @@ Mostrami:
 
 ## Output 4 – Adattamento dell'app per le device mobili proposta da Qwen (21/06/2026)
 
-## Cosa è cambiato per il mobile
+### Cosa è cambiato per il mobile
 
 ### Touch‑friendly
 
