@@ -12,7 +12,7 @@ Qui non ti serve nessuna parola tecnica: bastano poche righe chiare su:
 
 ## La mia idea di partenza
 
-Un’app web e mobile come un “taccuino di viaggio intelligente”: una semplice applicazione dove posso raccogliere in un unico posto tutte le idee per i miei viaggi di piacere (destinazioni, percorsi, curiosità, recensioni, budget e costi) con l’obiettivo di trasformare pensieri sparsi in un piano di viaggio chiaro e facile da consultare.
+**Un’app web e mobile come un “taccuino di viaggio intelligente”: una semplice applicazione dove posso raccogliere in un unico posto tutte le idee per i miei viaggi di piacere (destinazioni, percorsi, curiosità, recensioni, budget e costi) con l’obiettivo di trasformare pensieri sparsi in un piano di viaggio chiaro e facile da consultare.**
 ---
 Visto che userò Qwen, è necessario impostare su quell'ambinte delle precise informazioni di progetto che, di seguito, elenco:
 
