@@ -23,7 +23,7 @@ Questo è il prompt che uso per chiedere all’AI una prima proposta di struttur
 
 ## Output 1 – Struttura della Home page proposta da Qwen (18/06/2026)
 
-## Struttura della homepage di ViaggiAI
+### Struttura della homepage di ViaggiAI
 
 ### Com’è fatta la pagina (a parole semplici)
 
