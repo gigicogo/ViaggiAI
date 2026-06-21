@@ -61,6 +61,36 @@ Così, anche se chiudi e riapri, ritrovi tutto.
 --- 
 
 ## Prompt 2 – Semplificare e ridurre il numero di schermate
+> **Prompt**  
+>
+> Senza stravolgere la struttura né cambiare lo stack (sempre solo HTML, CSS e JavaScript, niente backend), applica questi piccoli miglioramenti di esperienza d’uso:
+>
+v 1. Quando salvo un nuovo viaggio, mostra un breve messaggio di conferma (ad esempio sopra la lista o sotto il form), che spariscedopo pochi secondi.
+> 2. Migliora leggermente lo stato “nessun viaggio”: rendilo più accogliente, con un testo di benvenuto un po’ più caldo ma sempre > sintetico.
+> 3. Mantieni separato il codice HTML, CSS e JavaScript come nella versione attuale e aggiungi solo i pezzi necessari per questi miglioramenti, commentando dove hai fatto le modifiche.
+>
+> Non introdurre ancora budget, spese o note: li aggiungeremo nelle prossime milestone.
+> Restituisci il file completo aggiornato.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 La prima proposta dell’AI può essere troppo complessa. Con questo prompt chiedo una versione più semplice, adatta a una prima versione dell’app.
 
