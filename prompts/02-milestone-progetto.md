@@ -74,18 +74,18 @@ Preferisci che l'app mostri subito la lista dei viaggi passati (come una dashboa
 ## Prompt 2 – Sintesi e raggruppamento delle milestone
 
 > **Prompt**  
-> Qui sotto trovi la roadmap che mi hai generato per il progetto “ViaggiAI”, con 10 milestone che vanno dall’idea al lancio.  
-> 
-> Ora voglio una versione più essenziale, utile per guidare davvero lo sviluppo dell’app.  
-> 
-> Istruzioni operative:  
-> 1. Riduci le milestone a **massimo 6**, raggruppando quelle che appartengono alla stessa fase (es. definizione, design, prototipo, sviluppo funzionalità, test, lancio).  
-> 2. Per ogni nuova milestone:  
->    - assegna un **titolo breve e descrittivo**, utile da usare anche come nome di branch o etichetta nel project management  
->    - scrivi una **descrizione in 2–3 frasi** focalizzata su cosa deve essere concretamente completato  
->    - definisci un chiaro criterio **“Fatto quando:”** in UNA sola frase verificabile (es.: “posso creare un viaggio, salvarlo e riaprirlo”).  
-> 3. Mantieni l’ordine logico di esecuzione: dalla definizione dell’app fino a una prima versione utilizzabile da tester esterni.  
-> 4. Restituisci il risultato in elenco numerato (Milestone 1, 2, 3, …).  
+> Le milestone che mi hai proposto vanno bene per me, ma sono troppo tecniche per i lettori a cui devo spiegare il progetto.
+>
+> Riscrivimi le STESSE 6 milestone:
+>    - usando un linguaggio comprensibile a chi non sa cosa sono HTML, JavaScript, localStorage o file JSON
+>    - senza nominare file, tecnologie o termini tecnici
+>    - parlando solo di cosa l’utente può fare in ogni fase (es. “posso creare un viaggio”, “posso aggiungere spese”, “posso fare un backup dei miei viaggi”)
+>    - mantenendo per ogni milestone:
+>    - un titolo breve
+>    - 2–3 frasi di descrizione
+>    - una frase che inizia con “Fatto quando:” che spiega in modo concreto cosa devo essere in grado di fare.
+>
+> Non aggiungere nuove milestone, limita a riscrivere queste 6 in modo più semplice.
 > 
 
 ## Output 2 – Milestone sintetizzate da Qwen (19/06/2026)
