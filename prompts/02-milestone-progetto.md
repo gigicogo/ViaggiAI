@@ -90,31 +90,33 @@ Preferisci che l'app mostri subito la lista dei viaggi passati (come una dashboa
 
 ## Output 2 – Milestone sintetizzate da Qwen (19/06/2026)
 
-Ecco la roadmap essenziale di ViaggiAI, condensata in 6 milestone operative:
+Ecco le 6 milestone riscritte in linguaggio semplice:
 
-**Milestone 1: Definizione e Architettura**  
-Unisci la scelta delle funzionalità core, la struttura dei dati necessari e la selezione degli strumenti tecnici (no-code o sviluppo custom). Questo crea le fondamenta solide su cui costruire senza dover tornare indietro per decisioni strutturali.  
-**Fatto quando:** Hai un documento con le 5 funzioni prioritarie, l'elenco dei dati da salvare per ogni viaggio e l'ambiente di sviluppo configurato e pronto all'uso.
+### Milestone 1: Creare il Primo Viaggio
+*   **Descrizione:** L'app permette di inserire le informazioni base di un viaggio: dove vai e quando. Una volta salvato, il viaggio appare in una lista che puoi consultare.
+*   **Fatto quando:** Posso scrivere destinazione e date, cliccare un pulsante, e vedere il mio viaggio comparire nella lista.
 
-**Milestone 2: Design e Flusso Utente**  
-Crea gli schizzi delle schermate principali (home, dettaglio, aggiunta nota) e collegali in un prototipo navigabile che simuli l'esperienza reale, anche se solo graficamente. Serve a validare la logica di navigazione prima di scrivere codice.  
-**Fatto quando:** Puoi cliccare attraverso gli schizzi per completare un intero flusso, dall'apertura dell'app alla creazione di un nuovo viaggio, senza blocchi logici.
+### Milestone 2: L'App Si Ricorda Tutto
+*   **Descrizione:** I viaggi che creo non spariscono quando chiudo l'app o il browser. Rimangono salvati e posso ritrovarli ogni volta che apro l'app, anche dopo giorni. Posso anche eliminare un viaggio se ho sbagliato.
+*   **Fatto quando:** Chiudo e riapro l'app, e tutti i miei viaggi sono ancora lì, pronti da consultare.
 
-**Milestone 3: Core Funzionante (CRUD)**  
-Sviluppa la funzione base di creazione e gestione dei viaggi: l'utente deve poter inserire una destinazione, salvarla nel database, vederla nella lista e riaprirla per modificarla. È il cuore pulsante dell'applicazione.  
-**Fatto quando:** Posso creare un nuovo viaggio con titolo e foto, salvarlo, ritrovarlo nella home e aprirlo nuovamente senza errori.
+### Milestone 3: Tenere Traccia delle Spese
+*   **Descrizione:** Per ogni viaggio posso impostare un budget totale e registrare tutte le spese che faccio, una per una. L'app mi mostra quanto ho già speso rispetto al budget che mi sono dato.
+*   **Fatto quando:** Posso aprire un viaggio, vedere quanto ho speso e aggiungere nuove spese con descrizione e importo.
 
-**Milestone 4: Gestione Budget e Spese**  
-Implementa la logica finanziaria permettendo di impostare un budget totale e aggiungere singole spese con calcolo automatico del residuo. Questa è la seconda funzionalità distintiva rispetto a una semplice lista di desideri.  
-**Fatto quando:** Posso aggiungere almeno 3 spese diverse a un viaggio e vedere il sistema aggiornare automaticamente il totale speso e il budget rimanente.
+### Milestone 4: Aggiungere Note e Dettagli
+*   **Descrizione:** Oltre ai soldi, posso scrivere appunti liberi per ogni viaggio: idee, cose da non dimenticare, link utili per prenotazioni o informazioni interessanti che trovo durante la preparazione.
+*   **Fatto quando:** Posso scrivere e salvare note personali per ogni viaggio, oltre a gestire il budget.
 
-**Milestone 5: Test e Rifinitura Usabilità**  
-Fai provare l'app a 2-3 amici chiedendo loro di eseguire compiti specifici, poi usa i feedback per correggere bug, chiarire testi confusi e migliorare i layout scomodi. L'obiettivo è rendere l'app intuitiva senza bisogno di spiegazioni.  
-**Fatto quando:** I tester riescono a creare un viaggio e gestire il budget da soli, senza farmi domande su come procedere.
+### Milestone 5: Fare Backup dei Dati
+*   **Descrizione:** Posso scaricare una copia di tutti i miei viaggi in un unico file, così ho un backup di sicurezza. Se cambio dispositivo o cancello i dati per sbaglio, posso ricaricare tutto da quel file.
+*   **Fatto quando:** Posso esportare tutti i miei viaggi in un file e, se serve, reimportarli per recuperarli.
 
-**Milestone 6: Lancio Alpha Esterno**  
-Rendi l'app accessibile pubblicamente (via link web o store) a un gruppo più ampio di utenti esterni al tuo circolo stretto per raccogliere feedback su scala leggermente maggiore. Segna il passaggio da progetto personale a prodotto utilizzabile.  
-**Fatto quando:** Almeno 5 persone esterne hanno registrato un account o usato l'app e mi hanno inviato un feedback strutturato.
+### Milestone 6: Usare l'App dal Telefono
+*   **Descrizione:** L'app diventa comoda da usare anche sullo smartphone, con pulsanti grandi e un'interfaccia che si adatta bene allo schermo piccolo. L'esperienza è fluida e piacevole, come un'app nativa.
+*   **Fatto quando:** Posso usare l'app dal telefono senza problemi, con pulsanti facili da toccare e niente elementi che si sovrappongono o escono dallo schermo.
+
+---
 
 ## Prompt 3 – Tradurre le milestone in lavoro operativo (issue / task)
 
