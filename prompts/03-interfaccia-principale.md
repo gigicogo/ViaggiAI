@@ -189,8 +189,6 @@ In fondo alla pagina:
 
 - pulsante rosso **“Elimina questo viaggio”** per cancellare l’intero viaggio e tutte le sue informazioni collegate  
 
----
-
 ## Cosa puoi fare ora con questa schermata
 
 - ✅ Vedere il riepilogo del budget con tre numeri: **budget totale**, **speso**, **rimanente**  
@@ -203,6 +201,8 @@ In fondo alla pagina:
 
 Il codice associato è pronto per essere testato.  
 Quando questa versione ti convince, il passo successivo sarà la **Milestone 5 (export/import JSON)**.
+
+---
 
 ## Note d’uso
 
