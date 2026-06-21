@@ -23,17 +23,40 @@ Questo è il prompt che uso per chiedere all’AI una prima proposta di struttur
 
 ## Output 1 – Struttura della Home page proposta da Qwen (18/06/2026)
 
-Struttura della Homepage di ViaggiAI
-Com'è fatta la pagina (a parole semplici)
-L'app è una pagina unica che cambia contenuto in base a cosa stai facendo. Immaginala come una piccola casa con tre stanze, ma tu vedi sempre solo una stanza alla volta:
-🏠 Stanza 1 — La Bacheca (quella che vedi all'apertura)
-È la schermata principale. In alto c'è il titolo dell'app "ViaggiAI" e un pulsante ben visibile "＋ Crea nuovo viaggio". Sotto, una lista di cartoline, una per ogni viaggio salvato: ogni cartolina mostra la destinazione e le date. Se non hai ancora creato nessun viaggio, vedi un messaggio di benvenuto che ti invita a crearne uno.
-✏️ Stanza 2 — Il Modulo di Creazione
-Quando premi "Crea nuovo viaggio", si apre una schermata con un piccolo modulo: destinazione, data di partenza, data di ritorno. Due pulsanti in fondo: Salva e Annulla.
-🔍 Stanza 3 — I Dettagli del Viaggio
-Quando tocchi una cartolina nella bacheca, si apre la schermata dei dettagli: in alto un pulsante "← Torna" per tornare alla bacheca, poi il nome della destinazione, le date, e (per ora vuote) le sezioni che riempiremo nelle milestone successive: budget, spese, note.
-💾 La memoria nascosta
-Ogni volta che crei, modifichi o elimini un viaggio, l'app lo salva automaticamente nella memoria del browser. Così, anche se chiudi e riapri, ritrovi tutto.
+## Struttura della homepage di ViaggiAI
+
+### Com’è fatta la pagina (a parole semplici)
+
+L’app è una pagina unica che cambia contenuto in base a cosa stai facendo. Immaginala come una piccola casa con tre stanze, ma tu vedi sempre solo una stanza alla volta.
+
+#### 🏠 Stanza 1 — La bacheca (schermata iniziale)
+
+È la schermata principale. In alto c’è il titolo dell’app **“ViaggiAI”** e un pulsante ben visibile **“＋ Crea nuovo viaggio”**.  
+Sotto, una lista di “cartoline”, una per ogni viaggio salvato: ogni cartolina mostra la destinazione e le date.  
+Se non hai ancora creato nessun viaggio, vedi un messaggio di benvenuto che ti invita a crearne uno.
+
+#### ✏️ Stanza 2 — Il modulo di creazione
+
+Quando premi **“Crea nuovo viaggio”**, si apre una schermata con un piccolo modulo:
+
+- destinazione
+- data di partenza
+- data di ritorno
+
+In fondo ci sono due pulsanti: **“Salva”** e **“Annulla”**.
+
+#### 🔍 Stanza 3 — I dettagli del viaggio
+
+Quando tocchi una cartolina nella bacheca, si apre la schermata dei dettagli:
+
+- in alto un pulsante **“← Torna”** per tornare alla bacheca  
+- poi il nome della destinazione e le date  
+- e (per ora vuote) le sezioni che riempiremo nelle milestone successive: **budget**, **spese**, **note**.
+
+#### 💾 La memoria nascosta
+
+Ogni volta che crei, modifichi o elimini un viaggio, l’app lo salva automaticamente nella memoria del browser.  
+Così, anche se chiudi e riapri, ritrovi tutto.
 
 ---
 
