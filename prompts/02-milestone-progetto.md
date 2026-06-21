@@ -66,8 +66,6 @@ Ecco una proposta di 6 milestone per costruire **ViaggiAI** passo dopo passo, ri
   - L'app sembra una "web app" nativa sul telefono.
   - I colori e i font sono coerenti e rilassanti (stile "vibe coding").
 
----
-
 **Domanda di chiarimento prima di iniziare la milestone 1:**  
 Preferisci che l'app mostri subito la lista dei viaggi passati (come una dashboard) o che parta direttamente dalla schermata di creazione di un nuovo viaggio?
 
