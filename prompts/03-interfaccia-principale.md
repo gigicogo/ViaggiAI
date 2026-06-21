@@ -72,77 +72,42 @@ Così, anche se chiudi e riapri, ritrovi tutto.
 > Non introdurre ancora budget, spese o note: li aggiungeremo nelle prossime milestone.
 > Restituisci il file completo aggiornato.
 
+## Output 2 – Miglioramenti Alla Home page proposta da Qwen (21/06/2026)
+
+## Riepilogo delle modifiche alla homepage
+
+### 1. Toast di conferma
+
+- Aggiunto un elemento `div` con `id="toast"` fuori dal contenitore `.app`, in modo che appaia sopra tutto il resto.
+- Definito CSS dedicato con animazione su `opacity` e `translateY` per farlo entrare ed uscire dal basso in modo morbido.
+- Creata la funzione `mostraToast(messaggio)` che:
+  - imposta il testo del toast
+  - lo rende visibile
+  - gestisce un timer di 2,5 secondi, resettandolo se vengono salvati più viaggi in rapida successione.
+- Chiamata `mostraToast('Viaggio salvato! ✈️')` all’interno di `salvaViaggio`, subito dopo il salvataggio e l’aggiornamento della lista.
+
+### 2. Stato “nessun viaggio” più accogliente
+
+- Resa la sezione vuota più evidente e invitante:
+  - sfondo bianco con bordo tratteggiato, per dare l’idea di uno spazio da riempire
+  - emoji più grande (🌍)
+  - titolo “Benvenuto in ViaggiAI”
+  - breve messaggio caldo che invita a creare il primo viaggio.
+- Nessun cambiamento alla logica: è solo un miglioramento di testo e aspetto.
+
+### 3. Struttura generale invariata
+
+- Stack e organizzazione restano gli stessi:
+  - singolo file HTML che contiene HTML, CSS e JavaScript
+  - nessun backend, nessun database esterno
+  - dati salvati in `localStorage` come prima.
+- Non sono state aggiunte nuove funzionalità di dominio (budget, spese, note): il codice è pronto per affrontare la Milestone 3.
+
+Puoi provare a creare un viaggio: alla conferma vedrai il toast apparire in basso al centro e sparire dopo pochi secondi. Quando questo comportamento ti convince, possiamo passare alla parte di **budget e spese**.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-La prima proposta dell’AI può essere troppo complessa. Con questo prompt chiedo una versione più semplice, adatta a una prima versione dell’app.
-
-> **Prompt**  
-> Ecco le schermate principali che mi hai proposto (incollo sotto la tua risposta).  
-> 
-> Ti chiedo di semplificarle:  
-> 1. Riduci il numero di schermate al minimo indispensabile per avere una prima versione utilizzabile dell’app (massimo 5 schermate).  
-> 2. Raggruppa le funzioni simili nella stessa schermata, quando ha senso farlo.  
-> 3. Per ogni schermata, riscrivi la descrizione in massimo 3 righe, mettendo in evidenza:  
->    - lo scopo della schermata  
->    - le azioni principali  
->    - il tipo di informazione che l’utente trova.  
-> 4. Restituisci il risultato in forma di elenco numerato.
-
-Anche in questo caso, sotto il prompt incollerò la nuova versione della lista di schermate.
-
----
-
-## Prompt 3 – Collegare schermate e flussi (navigazione)
-
-Una volta definite le schermate principali, voglio chiarire come ci si muove da una all’altra (i “percorsi” dell’utente).
-
-> **Prompt**  
-> Abbiamo definito l’elenco delle schermate principali per l’app “ViaggiAI”.  
-> Ora ti chiedo di concentrarti sulla navigazione:  
-> 1. Disegna, in forma testuale, i principali flussi dell’utente, ad esempio:  
->    - “da zero a primo viaggio creato”  
->    - “aggiornare il budget di un viaggio”  
->    - “rileggere le note e le curiosità di un viaggio passato”.  
-> 2. Per ogni flusso, descrivi passo per passo quali schermate vengono toccate e che azioni compie l’utente.  
-> 3. Restituisci il tutto in formato elenco puntato, uno per flusso, con i passi numerati.  
-> 4. Mantieni un linguaggio semplice e visuale, come se stessi raccontando la scena a voce.
-
-Sotto questo prompt incollerò la risposta dell’AI, che rappresenta la prima versione dei flussi dell’app.
-
----
-
-## Prompt 4 – Suggerimenti per la resa visiva
-
-Infine, voglio farmi aiutare dall’AI a dare qualche indicazione di stile, per rendere l’interfaccia coerente con la “vibe” dell’app.
-
-> **Prompt**  
-> Considerando l’idea di “taccuino di viaggio intelligente” e le schermate che abbiamo definito, ti chiedo di:  
-> 1. Suggerire uno stile visivo generale per l’app (colori, tono, livello di semplicità).  
-> 2. Dare per ogni schermata 2–3 indicazioni pratiche (es.: “usa una grande call-to-action”, “mostra le date in alto”, “metti le note in una colonna laterale”).  
-> 3. Restare su indicazioni di design comprensibili anche a chi non è designer (evita termini troppo tecnici).  
-> 4. Restituire il risultato in elenco strutturato per schermata.
-
-Queste indicazioni non sostituiscono il lavoro di un designer, ma aiutano a mantenere una certa coerenza tra l’idea iniziale, i flussi e l’aspetto dell’app.
-
----
 
 ## Note d’uso
 
