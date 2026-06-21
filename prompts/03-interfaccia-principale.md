@@ -11,21 +11,30 @@ L’obiettivo è avere una struttura chiara dell’esperienza utente prima ancor
 Questo è il prompt che uso per chiedere all’AI una prima proposta di struttura dell’interfaccia.
 
 > **Prompt**  
-> Sto progettando un’app web e mobile come un “taccuino di viaggio intelligente”.  
-> L’app serve per raccogliere in un unico posto tutte le idee per i miei viaggi di piacere: destinazioni, percorsi, curiosità, recensioni, budget e costi.  
-> 
-> Voglio lavorare in stile “vibe coding”: ti descrivo in italiano semplice l’esperienza che ho in mente e tu mi aiuti a trasformarla in schermate e flussi chiari.  
-> 
-> Per favore:  
-> 1. Proponimi una lista delle schermate principali dell’app (es.: home, elenco viaggi, dettaglio viaggio, ecc.).  
-> 2. Per ogni schermata, descrivi:  
->    - che cosa vede l’utente  
->    - che cosa può fare (azioni principali)  
->    - in che modo arriva a quella schermata e dove può andare dopo.  
-> 3. Usa un linguaggio comprensibile anche a chi non è sviluppatore.  
-> 4. Non scrivere ancora codice: resta sul livello di esperienza utente.
+> Usando il contesto di ViaggiAI che ti ho descritto nelle Istruzioni del progetto, aiutami a progettare la homepage dell’app.
+>
+> Voglio:
+> – vedere la lista dei viaggi salvati (titolo, destinazione, date)
+> – avere un pulsante chiaro “Crea nuovo viaggio”
+> – poter aprire un viaggio per vedere i dettagli.
+>
+> Descrivimi prima in parole semplici com’è strutturata la pagina (sezioni, elementi principali) e solo dopo proponimi il codice o > i componenti necessari, usando solo HTML, CSS e JavaScript.
 
-Sotto questo prompt incollerò la risposta dell’AI, così posso confrontarla con versioni successive.
+
+
+
+
+Struttura della Homepage di ViaggiAI
+Com'è fatta la pagina (a parole semplici)
+L'app è una pagina unica che cambia contenuto in base a cosa stai facendo. Immaginala come una piccola casa con tre stanze, ma tu vedi sempre solo una stanza alla volta:
+🏠 Stanza 1 — La Bacheca (quella che vedi all'apertura)
+È la schermata principale. In alto c'è il titolo dell'app "ViaggiAI" e un pulsante ben visibile "＋ Crea nuovo viaggio". Sotto, una lista di cartoline, una per ogni viaggio salvato: ogni cartolina mostra la destinazione e le date. Se non hai ancora creato nessun viaggio, vedi un messaggio di benvenuto che ti invita a crearne uno.
+✏️ Stanza 2 — Il Modulo di Creazione
+Quando premi "Crea nuovo viaggio", si apre una schermata con un piccolo modulo: destinazione, data di partenza, data di ritorno. Due pulsanti in fondo: Salva e Annulla.
+🔍 Stanza 3 — I Dettagli del Viaggio
+Quando tocchi una cartolina nella bacheca, si apre la schermata dei dettagli: in alto un pulsante "← Torna" per tornare alla bacheca, poi il nome della destinazione, le date, e (per ora vuote) le sezioni che riempiremo nelle milestone successive: budget, spese, note.
+💾 La memoria nascosta
+Ogni volta che crei, modifichi o elimini un viaggio, l'app lo salva automaticamente nella memoria del browser. Così, anche se chiudi e riapri, ritrovi tutto.
 
 ---
 
