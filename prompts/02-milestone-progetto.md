@@ -10,13 +10,13 @@ L’obiettivo non è fare subito il piano perfetto, ma creare una prima bozza di
 
 Questo è il prompt che uso per chiedere all’AI di propormi una struttura di base del progetto.
 
->**Prompt**  
-> Proponimi una lista di 5–6 milestone (tappe) per arrivare da “idea grezza” 
-> a “prima versione usabile” di questa app per >organizzare i viaggi.
+> **Prompt**  
+> Proponimi una lista di 5–6 milestone (tappe) per arrivare da “idea grezza” a “prima versione usabile” di questa app per organizzare i viaggi.
+> 
 > Per ogni milestone dammi:
-> – un titolo breve
-> – una breve descrizione
-> – cosa devo considerare “fatto” per poterla spuntare.
+>    - un titolo breve
+>    - una breve descrizione
+>    - cosa devo considerare “fatto” per poterla spuntare.
 >
 
 ## Output 1 – Roadmap proposta da Qwen (18/06/2026)
