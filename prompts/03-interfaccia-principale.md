@@ -58,7 +58,7 @@ Quando tocchi una cartolina nella bacheca, si apre la schermata dei dettagli:
 Ogni volta che crei, modifichi o elimini un viaggio, l’app lo salva automaticamente nella memoria del browser.  
 Così, anche se chiudi e riapri, ritrovi tutto.
 
----
+--- 
 
 ## Prompt 2 – Semplificare e ridurre il numero di schermate
 
