@@ -105,9 +105,104 @@ Così, anche se chiudi e riapri, ritrovi tutto.
 
 Puoi provare a creare un viaggio: alla conferma vedrai il toast apparire in basso al centro e sparire dopo pochi secondi. Quando questo comportamento ti convince, possiamo passare alla parte di **budget e spese**.
 
+--- 
 
+## Prompt 3 – Schermata di dettaglio del viaggio
+> **Prompt**  
+>
+> Ora concentriamoci sulla schermata di dettaglio di un singolo viaggio.
+> 
+> Lì voglio vedere:
+> – il titolo del viaggio e la destinazione
+> – le date
+> – il budget totale e il totale speso finora
+> – le note e le curiosità
+> – la lista delle spese.
+> 
+> Usando solo HTML, CSS e JavaScript nello stesso stile del codice che abbiamo già, proponimi prima la struttura logica (come se fosse una scheda organizzata in blocchi), poi il modo migliore per implementarla mantenendo la singola pagina che gira nel browser con localStorage per salvare i dati.
 
+## Output 3 – Schermata di dettaglio del viaggio proposta da Qwen (21/06/2026)
 
+## Struttura logica della schermata dettaglio
+
+### 1. Toast di conferma
+
+## Struttura logica della schermata di dettaglio
+
+Immagina la scheda del viaggio come un foglio organizzato in 6 blocchi verticali, dall’alto verso il basso.
+
+### 📍 Blocco 1: Intestazione
+
+In alto:
+
+- pulsante **“← Torna”** per tornare alla bacheca  
+- nome della destinazione come titolo grande  
+- date del viaggio formattate sotto il titolo  
+
+### 💰 Blocco 2: Riepilogo budget
+
+Una “cartolina” con tre numeri ben visibili:
+
+- **Budget totale** (quanto hai deciso di spendere)  
+- **Speso finora** (somma di tutte le spese registrate)  
+- **Rimanente** (quanto ti resta; se negativo, indica quanto hai sforato)  
+
+Se il budget non è ancora impostato, compare un messaggio che invita a inserirlo.
+
+### 🧾 Blocco 3: Spese
+
+Una lista di righe, una per ogni spesa registrata. Ogni riga mostra:
+
+- descrizione (es. “Cena ristorante”)  
+- importo (es. “€ 45,00”)  
+- categoria opzionale (es. “Pasti”, “Trasporti”)  
+- un piccolo pulsante **“×”** per eliminare la spesa  
+
+In fondo alla lista:
+
+- pulsante **“＋ Aggiungi spesa”** che apre un piccolo form inline
+  - descrizione
+  - importo
+  - categoria opzionale
+
+### 📝 Blocco 4: Note
+
+- un’area di testo libera dove scrivere appunti, idee, cose da non dimenticare  
+- un pulsante **“Salva note”** sotto l’area di testo  
+
+### 💡 Blocco 5: Curiosità
+
+Una lista di elementi testuali (es. “Il museo è chiuso il lunedì”, “Link prenotazione hotel: …”).
+
+Per ogni elemento:
+
+- testo della curiosità  
+- pulsante **“×”** per eliminarla  
+
+In fondo alla sezione:
+
+- pulsante **“＋ Aggiungi curiosità”** per creare una nuova voce  
+
+### 🗑️ Blocco 6: Azioni finali
+
+In fondo alla pagina:
+
+- pulsante rosso **“Elimina questo viaggio”** per cancellare l’intero viaggio e tutte le sue informazioni collegate  
+
+---
+
+## Cosa puoi fare ora con questa schermata
+
+- ✅ Vedere il riepilogo del budget con tre numeri: **budget totale**, **speso**, **rimanente**  
+- ✅ Aggiungere spese con descrizione, importo e categoria opzionale  
+- ✅ Eliminare singole spese  
+- ✅ Scrivere e salvare note libere  
+- ✅ Aggiungere ed eliminare curiosità  
+- ✅ Modificare il budget in qualsiasi momento  
+- ✅ Far sì che tutto si salvi automaticamente in `localStorage`  
+
+Il codice associato è pronto per essere testato.  
+Quando questa versione ti convince, il passo successivo sarà la **Milestone 5 (export/import JSON)**.
 
 ## Note d’uso
 
