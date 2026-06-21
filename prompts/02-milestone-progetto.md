@@ -21,49 +21,55 @@ Questo è il prompt che uso per chiedere all’AI di propormi una struttura di b
 
 ## Output 1 – Roadmap proposta da Qwen (18/06/2026)
 
-Ecco una roadmap chiara e pratica per trasformare la tua idea in un'app funzionante, divisa in milestone concrete:
+Ecco una proposta di 6 milestone per costruire **ViaggiAI** passo dopo passo, rispettando un approccio conservativo e la preferenza per HTML/JS puro con `localStorage`.
 
-**Milestone 1: Definizione del Viaggio Ideale**
-Descrivi su carta o documento le 3-5 funzionalità essenziali che l'app deve avere (es. salvare destinazioni, annotare costi, aggiungere foto).  
-**Fatto quando:** Hai una lista prioritaria di massimo 5 funzioni core, con esempi concreti di come le useresti tu.
+### Milestone 1: Lo "Scheletro" (Struttura base)
 
-**Milestone 2: Schizzi delle Schermate Principali**
-Disegna a mano o con tool semplici (Figma, Canva) le schermate chiave: home, dettaglio destinazione, aggiunta nota, budget. Non serve perfezione grafica.  
-**Fatto quando:** Hai 4-6 schizzi chiari che mostrano cosa vede l'utente in ogni schermata principale.
+- **Descrizione:** Creiamo un unico file `index.html` con una struttura pulita. Implementiamo la logica base per creare un nuovo viaggio (nome destinazione, date inizio/fine) e salvarlo in memoria temporanea.
+- **Cosa è "fatto":**
+  - Hai un form minimale che accetta destinazione e date.
+  - Cliccando "Salva", il viaggio appare in una lista sotto il form.
+  - L'interfaccia è leggibile sia su PC che su mobile (viewport impostato correttamente).
 
-**Milestone 3: Struttura dei Dati**
-Definisci quali informazioni devi salvare per ogni viaggio: nome destinazione, date, costo stimato, note, foto, recensioni linkate.  
-**Fatto quando:** Hai un elenco strutturato tipo "ogni viaggio ha: titolo, luogo, data inizio/fine, budget totale, lista spese, galleria foto".
+### Milestone 2: La persistenza (niente più perdite)
 
-**Milestone 4: Prototipo Navigabile**
-Collega gli schizzi tra loro creando un flusso cliccabile (anche solo immagini collegate in Figma o PowerPoint). Deve sembrare un'app vera ma senza logica dietro.  
-**Fatto quando:** Puoi "navigare" dall'home alla creazione di un nuovo viaggio e tornare indietro, cliccando sui tuoi schizzi.
+- **Descrizione:** Risolviamo subito il problema che avevi nell'app di finanze: i dati devono sopravvivere al refresh della pagina. Usiamo `localStorage` per salvare l'array dei viaggi.
+- **Cosa è "fatto":**
+  - Se chiudi e riapri il browser, i viaggi creati sono ancora lì.
+  - Ogni viaggio nella lista ha un pulsante "Elimina" per gestire gli errori.
 
-**Milestone 5: Scelta degli Strumenti Tecnici**
-Decidi se usare strumenti no-code (Bubble, Glide, Adalo) o sviluppare da zero. Considera budget, tempo e competenze.  
-**Fatto quando:** Hai scelto la piattaforma/tecnologia e creato un account di prova funzionante.
+### Milestone 3: Il cuore finanziario (budget e spese)
 
-**Milestone 6: Prima Funzione Costruita**
-Implementa UNA sola funzione completa: ad esempio "aggiungere una nuova destinazione con nome e foto". Deve funzionare davvero, salvare i dati e mostrarli.  
-**Fatto quando:** Puoi creare un viaggio, salvarlo, vederlo nella lista e aprirlo di nuovo.
+- **Descrizione:** Entriamo nel dettaglio di ogni viaggio. Aggiungiamo la possibilità di impostare un **budget totale** e di registrare singole spese (importo, descrizione, categoria opzionale).
+- **Cosa è "fatto":**
+  - Puoi cliccare su un viaggio esistente per aprirne i dettagli.
+  - All'interno dei dettagli puoi aggiungere spese e vedere un contatore "Speso vs Budget".
 
-**Milestone 7: Gestione Budget Base**
-Aggiungi la possibilità di inserire spese per ogni viaggio e vedere il totale speso vs budget previsto.  
-**Fatto quando:** Puoi aggiungere almeno 3 spese a un viaggio e vedere il calcolo automatico del totale.
+### Milestone 4: Il taccuino (note e curiosità)
 
-**Milestone 8: Test con Utenti Reali**
-Fai provare l'app a 2-3 amici fidati. Chiedi loro di completare un compito specifico (es. "crea un viaggio a Parigi") e osserva dove si bloccano.  
-**Fatto quando:** Hai raccolto feedback da almeno 2 persone e identificato 3-5 problemi da risolvere.
+- **Descrizione:** Trasformiamo l'app da semplice foglio di calcolo a taccuino. Aggiungiamo un'area di testo libera per note generali e una sezione per "Curiosità" o link utili (ad esempio il link alla prenotazione hotel).
+- **Cosa è "fatto":**
+  - Ogni viaggio ha una sua sezione "Note" salvabile.
+  - L'interfaccia permette di scorrere facilmente tra budget e note.
 
-**Milestone 9: Rifinitura Essenziale**
-Correggi i problemi emersi dai test, migliora testi confusi, aggiusta layout scomodi. Non cercare la perfezione, solo l'usabilità.  
-**Fatto quando:** Gli stessi tester riescono a usare l'app senza chiederti spiegazioni.
+### Milestone 5: Backup e portabilità (file JSON)
 
-**Milestone 10: Lancio della Versione Alpha**
-Rendi l'app accessibile ad altri oltre ai tester iniziali (condividi link, pubblica su store se mobile, o rendila web-accessibile).  
-**Fatto quando:** Almeno 5 persone esterne al tuo circolo ristretto hanno usato l'app e ti hanno dato un feedback.
+- **Descrizione:** Come per la tua app di finanze, implementiamo export/import. Questo ti permette di fare backup manuali o spostare i dati tra dispositivi senza dipendere solo dal browser.
+- **Cosa è "fatto":**
+  - Un pulsante "Esporta viaggi" scarica un file `.json`.
+  - Un pulsante "Importa viaggi" carica il file e aggiorna la lista.
 
-**Consiglio vibe coding:** Lavora su una milestone alla volta. Quando ne completi una, festeggia! 🎉 Poi passa alla successiva. Non saltare passaggi: ogni tappa costruisce le fondamenta per quella dopo.
+### Milestone 6: Rifinitura "vibe" (UX mobile)
+
+- **Descrizione:** Rendiamo l'esperienza fluida. Miglioriamo i pulsanti per il touch, aggiungiamo feedback visivi quando si salva e ci assicuriamo che non ci siano scroll orizzontali accidentali su schermi piccoli.
+- **Cosa è "fatto":**
+  - L'app sembra una "web app" nativa sul telefono.
+  - I colori e i font sono coerenti e rilassanti (stile "vibe coding").
+
+---
+
+**Domanda di chiarimento prima di iniziare la milestone 1:**  
+Preferisci che l'app mostri subito la lista dei viaggi passati (come una dashboard) o che parta direttamente dalla schermata di creazione di un nuovo viaggio?
 
 ---
 
