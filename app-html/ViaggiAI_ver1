@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>ViaggiAI</title>
+  <style>
+    :root {
+      --sfondo: #f5f1ea;
+      --cartolina: #ffffff;
+      --primario: #3d7c8a;
+      --primario-chiaro: #e8f1f3;
+      --testo: #2c2c2c;
+      --testo-chiaro: #6b6b6b;
+      --bordo: #e0dcd3;
+      --pericolo: #c85a5a;
+      --successo: #5a9e6f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--sfondo);
+      color: var(--testo);
+      min-height: 100vh;
+      padding: 16px;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .app {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--bordo);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: var(--primario);
+    }
+
+    .schermata { display: none; }
+    .schermata.attiva { display: block; }
+
+    /* Pulsanti - OTTIMIZZATI PER TOUCH */
+    .btn {
+      padding: 14px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: transform 0.1s, opacity 0.2s;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primario {
+      background: var(--primario);
+      color: white;
+    }
+    .btn-secondario {
+      background: var(--bordo);
+      color: var(--testo);
+    }
+    .btn-pericolo {
+      background: transparent;
+      color: var(--pericolo);
+      border: 2px solid var(--pericolo);
+    }
+    .btn-pieno { width: 100%; }
+    .btn-piccolo {
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      min-height: 40px;
+    }
+
+    /* Bacheca */
+    .azione-principale {
+      margin-bottom: 12px;
+    }
+
+    .azione-backup {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .lista-viaggi {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .cartolina {
+      background: var(--cartolina);
+      border-radius: 12px;
+      padding: 18px;
+      cursor: pointer;
+      border: 1px solid var(--bordo);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .cartolina:active {
+      transform: scale(0.98);
+      background: var(--primario-chiaro);
+    }
+    .cartolina-destinazione {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .cartolina-date {
+      color: var(--testo-chiaro);
+      font-size: 0.95rem;
+    }
+
+    .vuoto {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--testo-chiaro);
+      background: var(--cartolina);
+      border-radius: 12px;
+      border: 1px dashed var(--bordo);
+    }
+    .vuoto-emoji { font-size: 3.5rem; margin-bottom: 16px; }
+    .vuoto-titolo {
+      font-size: 1.3rem;
+      color: var(--testo);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .vuoto-testo {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Form - OTTIMIZZATI PER MOBILE */
+    .campo {
+      margin-bottom: 18px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      color: var(--testo-chiaro);
+      font-weight: 500;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--bordo);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: var(--cartolina);
+      min-height: 48px;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primario);
+      box-shadow: 0 0 0 3px var(--primario-chiaro);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-azioni {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .form-azioni .btn { flex: 1; }
+
+    /* Dettagli */
+    .dettaglio-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .btn-indietro {
+      background: var(--primario-chiaro);
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--primario);
+      padding: 8px 12px;
+      border-radius: 10px;
+      min-width: 48px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sezione {
+      background: var(--cartolina);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 14px;
+      border: 1px solid var(--bordo);
+    }
+    .sezione-titolo {
+      font-size: 0.9rem;
+      color: var(--testo-chiaro);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+    .sezione-valore {
+      font-size: 1.15rem;
+    }
+
+    /* Budget - RESPONSIVE */
+    .budget-griglia {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .budget-item {
+      text-align: center;
+      padding: 12px 8px;
+      background: var(--sfondo);
+      border-radius: 10px;
+    }
+    .budget-label {
+      font-size: 0.85rem;
+      color: var(--testo-chiaro);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .budget-valore {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .budget-valore.negativo {
+      color: var(--pericolo);
+    }
+    .budget-valore.positivo {
+      color: var(--successo);
+    }
+
+    /* Spese - OTTIMIZZATE PER MOBILE */
+    .spesa-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--bordo);
+    }
+    .spesa-item:last-child {
+      border-bottom: none;
+    }
+    .spesa-info {
+      flex: 1;
+      margin-right: 12px;
+    }
+    .spesa-descrizione {
+      font-weight: 500;
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+    .spesa-categoria {
+      font-size: 0.9rem;
+      color: var(--testo-chiaro);
+    }
+    .spesa-importo {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-right: 12px;
+      white-space: nowrap;
+    }
+    .btn-elimina-spesa {
+      background: var(--pericolo);
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 8px;
+      min-width: 40px;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .form-spese {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--bordo);
+    }
+    /* MOBILE: form spese impilato verticalmente */
+    .form-spese-riga {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .form-spese input {
+      padding: 12px;
+      font-size: 1rem;
+    }
+
+    /* Curiosità */
+    .curiosita-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--bordo);
+    }
+    .curiosita-item:last-child {
+      border-bottom: none;
+    }
+    .curiosita-testo {
+      flex: 1;
+      margin-right: 12px;
+      font-size: 1rem;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--primario);
+      color: white;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 500;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 100;
+      max-width: 90%;
+      text-align: center;
+    }
+    .toast.visibile {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .vuoto-sezione {
+      text-align: center;
+      padding: 24px;
+      color: var(--testo-chiaro);
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    /* ========== MEDIA QUERIES PER MOBILE ========== */
+    
+    /* Schermi molto piccoli (telefoni in verticale) */
+    @media (max-width: 480px) {
+      body {
+        padding: 12px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .azione-backup {
+        grid-template-columns: 1fr;
+      }
+
+      .budget-griglia {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .budget-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+      }
+
+      .budget-label {
+        margin-bottom: 0;
+      }
+
+      .form-azioni {
+        flex-direction: column;
+      }
+    }
+
+    /* Schermi medi (tablet piccoli, telefoni grandi) */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .form-spese-riga {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-spese-riga input:first-child {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Schermi grandi (desktop) */
+    @media (min-width: 769px) {
+      .form-spese-riga {
+        grid-template-columns: 1fr 120px 1fr auto;
+      }
+    }
+
+    /* Prevenire zoom su input in iOS */
+    @supports (-webkit-overflow-scrolling: touch) {
+      input, textarea, select {
+        font-size: 16px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>ViaggiAI</h1>
+    </header>
+
+    <!-- STANZA 1: BACHECA -->
+    <section id="schermata-bacheca" class="schermata attiva">
+      <div class="azione-principale">
+        <button class="btn btn-primario btn-pieno" onclick="apriCreazione()">
+          ＋ Crea nuovo viaggio
+        </button>
+      </div>
+
+      <div class="azione-backup">
+        <button class="btn btn-secondario btn-pieno" onclick="esportaViaggi()">
+          📥 Esporta viaggi
+        </button>
+        <button class="btn btn-secondario btn-pieno" onclick="document.getElementById('file-import').click()">
+          📤 Importa viaggi
+        </button>
+        <input type="file" id="file-import" accept=".json" style="display: none;" onchange="importaViaggi(event)">
+      </div>
+
+      <div id="lista-viaggi" class="lista-viaggi"></div>
+    </section>
+
+    <!-- STANZA 2: CREAZIONE -->
+    <section id="schermata-creazione" class="schermata">
+      <div class="dettaglio-header">
+        <button class="btn-indietro" onclick="mostraBacheca()">←</button>
+        <h2>Nuovo viaggio</h2>
+      </div>
+      <form onsubmit="salvaViaggio(event)">
+        <div class="campo">
+          <label for="destinazione">Destinazione</label>
+          <input type="text" id="destinazione" required placeholder="es. Lisbona">
+        </div>
+        <div class="campo">
+          <label for="data-inizio">Data di partenza</label>
+          <input type="date" id="data-inizio" required>
+        </div>
+        <div class="campo">
+          <label for="data-fine">Data di ritorno</label>
+          <input type="date" id="data-fine" required>
+        </div>
+        <div class="form-azioni">
+          <button type="button" class="btn btn-secondario" onclick="mostraBacheca()">Annulla</button>
+          <button type="submit" class="btn btn-primario">Salva</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- STANZA 3: DETTAGLI -->
+    <section id="schermata-dettagli" class="schermata">
+      <div class="dettaglio-header">
+        <button class="btn-indietro" onclick="mostraBacheca()">←</button>
+        <h2 id="dettaglio-titolo">Viaggio</h2>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Date</div>
+        <div class="sezione-valore" id="dettaglio-date">—</div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">
+          <span>Budget</span>
+          <button class="btn btn-secondario btn-piccolo" onclick="modificaBudget()">Modifica</button>
+        </div>
+        <div id="budget-contenuto"></div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Spese</div>
+        <div id="spese-lista"></div>
+        <div class="form-spese">
+          <div class="form-spese-riga">
+            <input type="text" id="spesa-descrizione" placeholder="Descrizione">
+            <input type="number" id="spesa-importo" placeholder="€" step="0.01" min="0">
+            <input type="text" id="spesa-categoria" placeholder="Categoria (opz.)">
+            <button class="btn btn-primario btn-piccolo" onclick="aggiungiSpesa()">＋ Aggiungi</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Note</div>
+        <textarea id="note-testo" placeholder="Scrivi qui i tuoi appunti..."></textarea>
+        <button class="btn btn-primario btn-pieno" style="margin-top: 14px;" onclick="salvaNote()">Salva note</button>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Curiosità</div>
+        <div id="curiosita-lista"></div>
+        <div style="margin-top: 14px; display: flex; gap: 10px;">
+          <input type="text" id="curiosita-input" placeholder="Aggiungi una curiosità..." style="flex: 1;">
+          <button class="btn btn-primario btn-piccolo" onclick="aggiungiCuriosita()">＋</button>
+        </div>
+      </div>
+
+      <button class="btn btn-pericolo btn-pieno" onclick="eliminaViaggioCorrente()">
+        Elimina questo viaggio
+      </button>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    // ---------- STATO ----------
+    const CHIAVE = 'viaggiai_viaggi';
+    let viaggi = caricaViaggi();
+    let viaggioCorrenteId = null;
+
+    // ---------- STORAGE ----------
+    function caricaViaggi() {
+      try {
+        const dati = JSON.parse(localStorage.getItem(CHIAVE)) || [];
+        return dati.map(v => ({
+          ...v,
+          budget: v.budget || 0,
+          spese: v.spese || [],
+          note: v.note || '',
+          curiosita: v.curiosita || []
+        }));
+      } catch {
+        return [];
+      }
+    }
+
+    function salvaViaggi() {
+      localStorage.setItem(CHIAVE, JSON.stringify(viaggi));
+    }
+
+    // ---------- TOAST ----------
+    let timeoutToast = null;
+    function mostraToast(messaggio) {
+      const toast = document.getElementById('toast');
+      toast.textContent = messaggio;
+      toast.classList.add('visibile');
+
+      if (timeoutToast) clearTimeout(timeoutToast);
+      timeoutToast = setTimeout(() => {
+        toast.classList.remove('visibile');
+        timeoutToast = null;
+      }, 2500);
+    }
+
+    // ---------- NAVIGAZIONE ----------
+    function mostraSchermata(id) {
+      document.querySelectorAll('.schermata').forEach(s => s.classList.remove('attiva'));
+      document.getElementById(id).classList.add('attiva');
+      window.scrollTo(0, 0);
+    }
+
+    function mostraBacheca() {
+      renderLista();
+      mostraSchermata('schermata-bacheca');
+    }
+
+    function apriCreazione() {
+      document.querySelector('form').reset();
+      mostraSchermata('schermata-creazione');
+    }
+
+    // ---------- RENDER LISTA ----------
+    function renderLista() {
+      const contenitore = document.getElementById('lista-viaggi');
+      if (viaggi.length === 0) {
+        contenitore.innerHTML = `
+          <div class="vuoto">
+            <div class="vuoto-emoji">🌍</div>
+            <div class="vuoto-titolo">Benvenuto in ViaggiAI</div>
+            <p class="vuoto-testo">
+              La tua prossima avventura inizia qui.<br>
+              Tocca il pulsante qui sopra per creare il tuo primo viaggio.
+            </p>
+          </div>`;
+        return;
+      }
+
+      contenitore.innerHTML = viaggi
+        .slice()
+        .sort((a, b) => new Date(a.dataInizio) - new Date(b.dataInizio))
+        .map(v => `
+          <div class="cartolina" onclick="apriDettaglio(${v.id})">
+            <div class="cartolina-destinazione">${escapeHtml(v.destinazione)}</div>
+            <div class="cartolina-date">${formatoDate(v.dataInizio, v.dataFine)}</div>
+          </div>
+        `).join('');
+    }
+
+    // ---------- CREAZIONE ----------
+    function salvaViaggio(event) {
+      event.preventDefault();
+      const destinazione = document.getElementById('destinazione').value.trim();
+      const dataInizio = document.getElementById('data-inizio').value;
+      const dataFine = document.getElementById('data-fine').value;
+
+      if (new Date(dataFine) < new Date(dataInizio)) {
+        alert('La data di ritorno deve essere successiva alla partenza.');
+        return;
+      }
+
+      const nuovo = {
+        id: Date.now(),
+        destinazione,
+        dataInizio,
+        dataFine,
+        budget: 0,
+        spese: [],
+        note: '',
+        curiosita: [],
+        creatoIl: new Date().toISOString()
+      };
+
+      viaggi.push(nuovo);
+      salvaViaggi();
+      mostraToast('Viaggio salvato! ✈️');
+      mostraBacheca();
+    }
+
+    // ---------- DETTAGLIO ----------
+    function apriDettaglio(id) {
+      const v = viaggi.find(x => x.id === id);
+      if (!v) return;
+      viaggioCorrenteId = id;
+
+      document.getElementById('dettaglio-titolo').textContent = v.destinazione;
+      document.getElementById('dettaglio-date').textContent = formatoDate(v.dataInizio, v.dataFine);
+      document.getElementById('note-testo').value = v.note || '';
+
+      renderBudget();
+      renderSpese();
+      renderCuriosita();
+
+      mostraSchermata('schermata-dettagli');
+    }
+
+    function renderBudget() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      const totaleSpeso = v.spese.reduce((sum, s) => sum + parseFloat(s.importo), 0);
+      const rimanente = v.budget - totaleSpeso;
+
+      const contenitore = document.getElementById('budget-contenuto');
+      
+      if (v.budget === 0) {
+        contenitore.innerHTML = `
+          <div class="vuoto-sezione">
+            Budget non impostato.<br>
+            Clicca "Modifica" per impostarlo.
+          </div>`;
+        return;
+      }
+
+      contenitore.innerHTML = `
+        <div class="budget-griglia">
+          <div class="budget-item">
+            <div class="budget-label">Budget</div>
+            <div class="budget-valore">€ ${v.budget.toFixed(2)}</div>
+          </div>
+          <div class="budget-item">
+            <div class="budget-label">Speso</div>
+            <div class="budget-valore">€ ${totaleSpeso.toFixed(2)}</div>
+          </div>
+          <div class="budget-item">
+            <div class="budget-label">Rimanente</div>
+            <div class="budget-valore ${rimanente < 0 ? 'negativo' : 'positivo'}">
+              € ${rimanente.toFixed(2)}
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function modificaBudget() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      const nuovoBudget = prompt('Inserisci il budget totale (€):', v.budget || '');
+      if (nuovoBudget === null) return;
+
+      const importo = parseFloat(nuovoBudget);
+      if (isNaN(importo) || importo < 0) {
+        alert('Inserisci un importo valido.');
+        return;
+      }
+
+      v.budget = importo;
+      salvaViaggi();
+      renderBudget();
+      mostraToast('Budget aggiornato!');
+    }
+
+    function renderSpese() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      const contenitore = document.getElementById('spese-lista');
+      
+      if (v.spese.length === 0) {
+        contenitore.innerHTML = '<div class="vuoto-sezione">Nessuna spesa registrata.</div>';
+        return;
+      }
+
+      contenitore.innerHTML = v.spese.map(s => `
+        <div class="spesa-item">
+          <div class="spesa-info">
+            <div class="spesa-descrizione">${escapeHtml(s.descrizione)}</div>
+            ${s.categoria ? `<div class="spesa-categoria">${escapeHtml(s.categoria)}</div>` : ''}
+          </div>
+          <div class="spesa-importo">€ ${parseFloat(s.importo).toFixed(2)}</div>
+          <button class="btn-elimina-spesa" onclick="eliminaSpesa(${s.id})">×</button>
+        </div>
+      `).join('');
+    }
+
+    function aggiungiSpesa() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      const descrizione = document.getElementById('spesa-descrizione').value.trim();
+      const importo = document.getElementById('spesa-importo').value;
+      const categoria = document.getElementById('spesa-categoria').value.trim();
+
+      if (!descrizione || !importo) {
+        alert('Inserisci descrizione e importo.');
+        return;
+      }
+
+      const importoNum = parseFloat(importo);
+      if (isNaN(importoNum) || importoNum <= 0) {
+        alert('Inserisci un importo valido.');
+        return;
+      }
+
+      v.spese.push({
+        id: Date.now(),
+        descrizione,
+        importo: importoNum,
+        categoria
+      });
+
+      salvaViaggi();
+      renderSpese();
+      renderBudget();
+
+      document.getElementById('spesa-descrizione').value = '';
+      document.getElementById('spesa-importo').value = '';
+      document.getElementById('spesa-categoria').value = '';
+
+      mostraToast('Spesa aggiunta!');
+    }
+
+    function eliminaSpesa(id) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      if (!confirm('Eliminare questa spesa?')) return;
+
+      v.spese = v.spese.filter(s => s.id !== id);
+      salvaViaggi();
+      renderSpese();
+      renderBudget();
+      mostraToast('Spesa eliminata.');
+    }
+
+    function salvaNote() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      v.note = document.getElementById('note-testo').value;
+      salvaViaggi();
+      mostraToast('Note salvate!');
+    }
+
+    function renderCuriosita() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      const contenitore = document.getElementById('curiosita-lista');
+      
+      if (v.curiosita.length === 0) {
+        contenitore.innerHTML = '<div class="vuoto-sezione">Nessuna curiosità aggiunta.</div>';
+        return;
+      }
+
+      contenitore.innerHTML = v.curiosita.map(c => `
+        <div class="curiosita-item">
+          <div class="curiosita-testo">${escapeHtml(c.testo)}</div>
+          <button class="btn-elimina-spesa" onclick="eliminaCuriosita(${c.id})">×</button>
+        </div>
+      `).join('');
+    }
+
+    function aggiungiCuriosita() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      const input = document.getElementById('curiosita-input');
+      const testo = input.value.trim();
+
+      if (!testo) {
+        alert('Inserisci un testo.');
+        return;
+      }
+
+      v.curiosita.push({
+        id: Date.now(),
+        testo
+      });
+
+      salvaViaggi();
+      renderCuriosita();
+      input.value = '';
+      mostraToast('Curiosità aggiunta!');
+    }
+
+    function eliminaCuriosita(id) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      if (!confirm('Eliminare questa curiosità?')) return;
+
+      v.curiosita = v.curiosita.filter(c => c.id !== id);
+      salvaViaggi();
+      renderCuriosita();
+      mostraToast('Curiosità eliminata.');
+    }
+
+    function eliminaViaggioCorrente() {
+      if (!viaggioCorrenteId) return;
+      if (!confirm('Vuoi davvero eliminare questo viaggio?')) return;
+      viaggi = viaggi.filter(v => v.id !== viaggioCorrenteId);
+      salvaViaggi();
+      mostraBacheca();
+    }
+
+    // ---------- EXPORT ----------
+    function esportaViaggi() {
+      if (viaggi.length === 0) {
+        mostraToast('Nessun viaggio da esportare.');
+        return;
+      }
+
+      const contenuto = JSON.stringify(viaggi, null, 2);
+      const blob = new Blob([contenuto], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'viaggiai-backup.json';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      URL.revokeObjectURL(url);
+      mostraToast('Backup scaricato! 📥');
+    }
+
+    // ---------- IMPORT ----------
+    function importaViaggi(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      if (!file.name.endsWith('.json')) {
+        mostraToast('Seleziona un file .json');
+        return;
+      }
+
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        try {
+          const dati = JSON.parse(e.target.result);
+
+          if (!validaDatiImportati(dati)) {
+            mostraToast('File non valido: formato errato.');
+            return;
+          }
+
+          if (viaggi.length > 0) {
+            const conferma = confirm(
+              `Stai per importare ${dati.length} viaggi. ` +
+              `I viaggi attuali (${viaggi.length}) verranno sostituiti. Continuare?`
+            );
+            if (!conferma) return;
+          }
+
+          viaggi = dati.map(v => ({
+            ...v,
+            budget: v.budget || 0,
+            spese: v.spese || [],
+            note: v.note || '',
+            curiosita: v.curiosita || []
+          }));
+
+          salvaViaggi();
+          renderLista();
+          mostraToast(`${viaggi.length} viaggi importati! ✈️`);
+
+        } catch (err) {
+          mostraToast('Errore nel leggere il file.');
+          console.error('Errore import:', err);
+        }
+      };
+
+      reader.onerror = function() {
+        mostraToast('Errore nel leggere il file.');
+      };
+
+      reader.readAsText(file);
+      event.target.value = '';
+    }
+
+    // ---------- VALIDAZIONE ----------
+    function validaDatiImportati(dati) {
+      if (!Array.isArray(dati)) return false;
+
+      for (const v of dati) {
+        if (
+          typeof v.id !== 'number' ||
+          typeof v.destinazione !== 'string' ||
+          typeof v.dataInizio !== 'string' ||
+          typeof v.dataFine !== 'string'
+        ) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    // ---------- UTILITÀ ----------
+    function formatoDate(inizio, fine) {
+      const opt = { day: 'numeric', month: 'short', year: 'numeric' };
+      const i = new Date(inizio).toLocaleDateString('it-IT', opt);
+      const f = new Date(fine).toLocaleDateString('it-IT', opt);
+      return `${i} → ${f}`;
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    // ---------- AVVIO ----------
+    renderLista();
+  </script>
+</body>
+</html>
