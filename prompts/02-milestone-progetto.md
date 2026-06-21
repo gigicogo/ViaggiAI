@@ -124,6 +124,10 @@ Ecco le 6 milestone riscritte in linguaggio semplice:
 
 ---
 
+Nota pratica per il vibe coding: non creare tutte le issue subito. Apri quelle della Milestone 1 ora, e crea le successive solo quando la milestone corrente è al 70–80% completata. Questo mantiene il backlog pulito e ti permette di adattare i task in base a ciò che impari strada facendo.
+
+---
+
 ## Prompt 3 – Tradurre le milestone in lavoro operativo (issue / task)
 
 > **Prompt**  
@@ -272,11 +276,8 @@ Ecco la scomposizione operativa delle 6 milestone in task tracciabili su GitHub,
 
 4. **Titolo:** Documentare risultati alpha e next steps  
    **Descrizione:** Sintetizza in un documento interno i feedback ricevuti, le metriche di utilizzo e le lezioni apprese. Definisci le priorità per la prossima iterazione basandoti sui dati reali, non sulle ipotesi.  
-   **Tipo:** Documentazione / Planning  
-
-
-Nota pratica per il vibe coding: non creare tutte le issue subito. Apri quelle della Milestone 1 ora, e crea le successive solo quando la milestone corrente è al 70–80% completata. Questo mantiene il backlog pulito e ti permette di adattare i task in base a ciò che impari strada facendo.
-
+   **Tipo:** Documentazione / Planning
+   
 ---
 
 ## Note d’uso
