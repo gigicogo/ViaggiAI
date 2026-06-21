@@ -204,6 +204,62 @@ Quando questa versione ti convince, il passo successivo sarà la **Milestone 5 (
 
 ---
 
+## Prompt 4 – Adattare l'app ale device mobili
+
+> **Prompt**  
+>
+> Ora voglio ottimizzare ViaggiAI per l’uso su smartphone, senza cambiare lo stack (sempre singola pagina HTML con HTML/CSS/JavaScript e localStorage).
+
+>Considera il codice attuale che ti ho fornito e applica SOLO miglioramenti di layout e stile per i dispositivi mobili:
+
+> – Assicurati che tutti i testi siano leggibili su schermi piccoli (font size, spaziature, margini).
+> – Verifica che i pulsanti principali siano comodamente cliccabili con il pollice (dimensione minima consigliata e spaziatura tra i pulsanti).
+> – Evita scroll orizzontali: il contenuto deve adattarsi bene a schermi stretti.
+> – Migliora il comportamento delle liste (viaggi, spese, curiosità) su mobile, evitando che gli elementi risultino troppo affollati.
+> – Mantieni il “vibe” attuale (colori, stile delle cartoline, toast), solo più ottimizzato per il touch.
+
+> Non introdurre nuove funzionalità: lavora solo su CSS e, se necessario, su piccole modifiche HTML.
+Mostrami:
+> 1) le nuove regole CSS aggiunte o modificate, con un breve commento
+> 2) eventuali piccole modifiche HTML (ad esempio classi aggiuntive) strettamente necessarie per il layout mobile.
+
+
+## Output 4 – Adattamento dell'app per le device mobili proposta da Qwen (21/06/2026)
+
+## Cosa è cambiato per il mobile
+
+### Touch‑friendly
+
+- Tutti i pulsanti hanno `min-height: 48px` (standard Google per touch).
+- I pulsanti di eliminazione (`×`) sono più grandi e con sfondo rosso per maggior visibilità.
+- Le cartoline hanno un feedback visivo al tocco (`transform: scale(0.98)`).
+- `input` e `textarea` hanno `min-height: 48px` e `padding` aumentato.
+
+### Layout responsive
+
+- I pulsanti **“Esporta”** / **“Importa”** si impilano verticalmente su schermi `< 480px`.
+- La griglia del budget passa da 3 colonne a 1 colonna su mobile, con layout orizzontale label–valore.
+- Il form spese si impila verticalmente su mobile, va a 2 colonne su tablet e a 4 colonne su desktop.
+- I pulsanti **“Annulla”** / **“Salva”** si impilano su schermi molto piccoli.
+
+### Ottimizzazioni iOS
+
+- Aggiunto meta tag per web app standalone.
+- `font-size: 16px` sugli input per prevenire lo zoom automatico.
+- `user-scalable=no` per evitare zoom accidentali.
+- `padding` aumentato per compensare la notch.
+
+### Miglioramenti generali
+
+- Focus sugli input con `box-shadow` per un feedback visivo più chiaro.
+- Cartoline con `padding` aumentato.
+- Toast con `max-width: 90%` per non uscire dallo schermo.
+- Pulsante “indietro” con sfondo e dimensioni touch‑friendly.
+
+Ora l’app è completamente usabile da smartphone, tablet e desktop. Provala dal telefono e verifica come cambia l’esperienza di utilizzo.
+
+---
+
 ## Note d’uso
 
 - Questo file è il “dietro le quinte” dell’interfaccia: mostra come una serie di prompt ben pensati possono trasformare un’idea vaga in un set di schermate e flussi ragionati.  
