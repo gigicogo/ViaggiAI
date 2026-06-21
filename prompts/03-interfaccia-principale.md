@@ -21,8 +21,7 @@ Questo è il prompt che uso per chiedere all’AI una prima proposta di struttur
 > Descrivimi prima in parole semplici com’è strutturata la pagina (sezioni, elementi principali) e solo dopo proponimi il codice o > i componenti necessari, usando solo HTML, CSS e JavaScript.
 
 
-
-
+## Output 1 – Struttura della Home page proposta da Qwen (18/06/2026)
 
 Struttura della Homepage di ViaggiAI
 Com'è fatta la pagina (a parole semplici)
