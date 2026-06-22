@@ -62,9 +62,15 @@ Le parti principali sono:
 
 - `prompts/`  
   Qui salvo i prompt usati nelle varie fasi, ad esempio:
-  - `fase-2-milestone.md` – prompt per dividere il progetto in tappe semplici.  
-  - `fase-3-pagine-principali.md` – prompt per far costruire all’AI le schermate principali.  
-  - `fase-4-test-e-migliorie.md` – prompt per trovare problemi e chiedere miglioramenti.
+  - `02-milestone-progetto.md` – prompt per dividere il progetto in tappe semplici.  
+  - `03-interfaccia-principale.md` – prompt per far costruire all’AI le schermate principali.  
+  - `ecc.
+ 
+  - `feature/`  
+  Screenshot, link e appunti brevi sui risultati ottenuti: “prima versione”, “versione migliorata”, “cosa ha funzionato / cosa no”.
+
+- `app-html/`  
+  Le versioni con il codice sorgente che puoi scaricare e migliorare a modo tuo”.
 
 - `output/`  
   Screenshot, link e appunti brevi sui risultati ottenuti: “prima versione”, “versione migliorata”, “cosa ha funzionato / cosa no”.
