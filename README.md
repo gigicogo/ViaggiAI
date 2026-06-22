@@ -1,4 +1,4 @@
-# Vibe Coding Travel Planner – Laboratorio Aperto
+# Vibe Coding Travel Planner – Laboratorio aperto
 
 Benvenuto nel mio piccolo laboratorio pubblico di *vibe coding* per costruire, insieme all’AI, un’app di viaggio personale.  
 Questo repository non è pensato per programmatori esperti, ma per persone curiose che vogliono vedere “dietro le quinte” di un progetto fatto a colpi di idee, prompt e iterazioni con l’Intelligenza Artificiale.
