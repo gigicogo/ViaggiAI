@@ -56,6 +56,1151 @@
     .btn-pericolo { background: transparent; color: var(--pericolo); border: 2px solid var(--pericolo); }
     .btn-pieno { width: 100%; }
     .btn-piccolo { padding: 10px 16px; font-size: 0.9rem; min-height: 40px; }
+    .btn-icona { padding: 8px 12px; min-width: 40px; }
+
+    .azione-principale { margin-bottom: 12px; }
+    .azione-backup { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+    .lista-viaggi { display: flex; flex-direction: column; gap: 12px; }
+
+    .cartolina {
+      background: var(--cartolina); border-radius: 12px; padding: 18px;
+      cursor: pointer; border: 1px solid var(--bordo); transition: transform 0.15s;
+    }
+    .cartolina:active { transform: scale(0.98); background: var(--primario-chiaro); }
+    .cartolina-destinazione { font-size: 1.2rem; font-weight: 600; margin-bottom: 6px; }
+    .cartolina-date { color: var(--testo-chiaro); font-size: 0.95rem; }
+
+    .vuoto {
+      text-align: center; padding: 48px 24px; color: var(--testo-chiaro);
+      background: var(--cartolina); border-radius: 12px; border: 1px dashed var(--bordo);
+    }
+    .vuoto-emoji { font-size: 3.5rem; margin-bottom: 16px; }
+    .vuoto-titolo { font-size: 1.3rem; color: var(--testo); margin-bottom: 10px; font-weight: 600; }
+    .vuoto-testo { font-size: 1rem; line-height: 1.6; }
+
+    .campo { margin-bottom: 18px; }
+    label {
+      display: block; margin-bottom: 8px; font-size: 0.95rem;
+      color: var(--testo-chiaro); font-weight: 500;
+    }
+    input, textarea, select {
+      width: 100%; padding: 14px; border: 1px solid var(--bordo);
+      border-radius: 10px; font-size: 1rem; font-family: inherit;
+      background: var(--cartolina); min-height: 48px;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none; border-color: var(--primario);
+      box-shadow: 0 0 0 3px var(--primario-chiaro);
+    }
+    textarea { resize: vertical; min-height: 120px; }
+    select { cursor: pointer; }
+
+    .form-azioni { display: flex; gap: 12px; margin-top: 24px; }
+    .form-azioni .btn { flex: 1; }
+
+    .dettaglio-header { 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .dettaglio-titolo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
+    }
+    .dettaglio-titolo-testo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--testo);
+      word-break: break-word;
+    }
+    .btn-indietro {
+      background: var(--primario-chiaro); border: none; font-size: 1.5rem;
+      cursor: pointer; color: var(--primario); padding: 8px 12px; border-radius: 10px;
+      min-width: 48px; min-height: 48px; display: flex; align-items: center; justify-content: center;
+    }
+
+    .sezione {
+      background: var(--cartolina); border-radius: 12px; padding: 18px;
+      margin-bottom: 14px; border: 1px solid var(--bordo);
+    }
+    .sezione-titolo {
+      font-size: 0.9rem; color: var(--testo-chiaro); text-transform: uppercase;
+      letter-spacing: 0.5px; margin-bottom: 12px;
+      display: flex; justify-content: space-between; align-items: center; font-weight: 600;
+    }
+    .sezione-valore { font-size: 1.15rem; }
+
+    .budget-griglia { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+    .budget-item { text-align: center; padding: 12px 8px; background: var(--sfondo); border-radius: 10px; }
+    .budget-label { font-size: 0.85rem; color: var(--testo-chiaro); margin-bottom: 6px; font-weight: 500; }
+    .budget-valore { font-size: 1.2rem; font-weight: 600; }
+    .budget-valore.negativo { color: var(--pericolo); }
+    .budget-valore.positivo { color: var(--successo); }
+
+    .spesa-item {
+      display: flex; flex-direction: column; gap: 8px;
+      padding: 14px 0; border-bottom: 1px solid var(--bordo);
+    }
+    .spesa-item:last-child { border-bottom: none; }
+    .spesa-header {
+      display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;
+    }
+    .spesa-info { flex: 1; }
+    .spesa-descrizione { font-weight: 600; margin-bottom: 4px; font-size: 1.05rem; }
+    .spesa-categoria { 
+      font-size: 0.85rem; color: var(--primario); 
+      background: var(--primario-chiaro);
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .spesa-data {
+      font-size: 0.85rem;
+      color: var(--testo-chiaro);
+      margin-bottom: 4px;
+    }
+    .spesa-importo { font-weight: 600; font-size: 1.1rem; color: var(--testo); }
+    .spesa-note {
+      font-size: 0.9rem;
+      color: var(--testo-chiaro);
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .spesa-azioni {
+      display: flex;
+      gap: 6px;
+    }
+    .btn-elimina {
+      background: var(--pericolo); color: white; border: none; font-size: 1.2rem;
+      cursor: pointer; padding: 8px 12px; border-radius: 8px;
+      min-width: 40px; min-height: 40px;
+      display: inline-flex; align-items: center; justify-content: center; font-weight: bold;
+    }
+
+    .form-spese { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--bordo); }
+    .form-spese-riga { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; }
+    .form-spese input, .form-spese select, .form-spese textarea { padding: 12px; font-size: 1rem; }
+
+    .curiosita-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 12px 0; border-bottom: 1px solid var(--bordo);
+    }
+    .curiosita-item:last-child { border-bottom: none; }
+    .curiosita-testo { flex: 1; margin-right: 12px; font-size: 1rem; }
+
+    /* ========== TAPPE ========== */
+    .tappa-card {
+      background: var(--sfondo); border-radius: 10px; padding: 16px;
+      margin-bottom: 12px; border: 1px solid var(--bordo);
+    }
+    .tappa-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--bordo);
+    }
+    .tappa-numero { font-size: 1.1rem; font-weight: 600; color: var(--primario); }
+    .tappa-griglia { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .tappa-coppia { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .tappa-quattro { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .tappa-campo { display: flex; flex-direction: column; }
+    .tappa-label { font-size: 0.8rem; color: var(--testo-chiaro); margin-bottom: 2px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.3px; }
+    .tappa-valore { font-size: 0.95rem; color: var(--testo); }
+    .tappa-valore.evidenzia { font-weight: 600; color: var(--primario); }
+    .tappa-separatore { margin: 10px 0; border-top: 1px dashed var(--bordo); }
+    .tappa-badge {
+      display: inline-block; background: var(--successo); color: white;
+      padding: 2px 8px; border-radius: 6px; font-size: 0.8rem; margin-left: 6px;
+    }
+
+    .form-tappa {
+      background: var(--primario-chiaro); border-radius: 12px;
+      padding: 20px; margin-top: 14px; border: 1px solid var(--bordo);
+    }
+    .form-tappa-titolo { font-size: 1.1rem; font-weight: 600; margin-bottom: 18px; color: var(--primario); }
+    .form-tappa label { font-size: 0.85rem; margin-bottom: 6px; color: var(--testo-chiaro); }
+    .form-tappa input, .form-tappa textarea, .form-tappa select {
+      padding: 12px; font-size: 1rem; min-height: 46px; background: var(--cartolina);
+    }
+    .form-tappa textarea { min-height: 90px; resize: vertical; }
+
+    .form-tappa-riga {
+      display: grid; grid-template-columns: 1fr; gap: 14px; margin-bottom: 4px;
+    }
+
+    .form-tappa-azioni { display: flex; gap: 10px; margin-top: 18px; }
+    .form-tappa-azioni .btn { flex: 1; }
+
+    .checkbox-container {
+      display: flex; align-items: center; gap: 10px; padding: 10px 0;
+    }
+    .checkbox-container input[type="checkbox"] {
+      width: 24px; height: 24px; min-height: auto; cursor: pointer;
+    }
+    .checkbox-container label { margin: 0; cursor: pointer; font-size: 1rem; }
+
+    .toast {
+      position: fixed; bottom: 24px; left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--primario); color: white; padding: 14px 24px;
+      border-radius: 12px; font-size: 1rem; font-weight: 500;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2); opacity: 0;
+      pointer-events: none; transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 100; max-width: 90%; text-align: center;
+    }
+    .toast.visibile { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .vuoto-sezione {
+      text-align: center; padding: 24px; color: var(--testo-chiaro);
+      font-style: italic; font-size: 0.95rem;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 12px; }
+      h1 { font-size: 1.6rem; }
+      .azione-backup { grid-template-columns: 1fr; }
+      .budget-griglia { grid-template-columns: 1fr; gap: 10px; }
+      .budget-item { display: flex; justify-content: space-between; align-items: center; text-align: left; }
+      .budget-label { margin-bottom: 0; }
+      .form-azioni { flex-direction: column; }
+      .tappa-coppia, .tappa-quattro { grid-template-columns: 1fr; }
+      .dettaglio-titolo-container { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .form-spese-riga { grid-template-columns: 1fr 1fr; }
+      .form-spese-riga input:first-child, .form-spese-riga select:first-child { grid-column: 1 / -1; }
+      .form-tappa-riga { grid-template-columns: 1fr 1fr; }
+      .tappa-griglia { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 769px) {
+      .form-spese-riga { grid-template-columns: 1fr 120px 1fr auto; }
+      .form-tappa-riga { grid-template-columns: 1fr 1fr; }
+      .tappa-griglia { grid-template-columns: 1fr 1fr; }
+      .tappa-quattro { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    @supports (-webkit-overflow-scrolling: touch) {
+      input, textarea, select { font-size: 16px !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header><h1>ViaggiAI</h1></header>
+
+    <section id="schermata-bacheca" class="schermata attiva">
+      <div class="azione-principale">
+        <button class="btn btn-primario btn-pieno" onclick="apriCreazione()">＋ Crea nuovo viaggio</button>
+      </div>
+      <div class="azione-backup">
+        <button class="btn btn-secondario btn-pieno" onclick="esportaViaggi()">📥 Esporta viaggi</button>
+        <button class="btn btn-secondario btn-pieno" onclick="document.getElementById('file-import').click()">📤 Importa viaggi</button>
+        <input type="file" id="file-import" accept=".json" style="display: none;" onchange="importaViaggi(event)">
+      </div>
+      <div id="lista-viaggi" class="lista-viaggi"></div>
+    </section>
+
+    <section id="schermata-creazione" class="schermata">
+      <div class="dettaglio-header">
+        <button class="btn-indietro" onclick="mostraBacheca()">←</button>
+        <h2>Nuovo viaggio</h2>
+      </div>
+      <form onsubmit="salvaViaggio(event)">
+        <div class="campo">
+          <label for="destinazione">Destinazione</label>
+          <input type="text" id="destinazione" required placeholder="es. Lisbona">
+        </div>
+        <div class="campo">
+          <label for="data-inizio">Data di partenza</label>
+          <input type="date" id="data-inizio" required>
+        </div>
+        <div class="campo">
+          <label for="data-fine">Data di ritorno</label>
+          <input type="date" id="data-fine" required>
+        </div>
+        <div class="form-azioni">
+          <button type="button" class="btn btn-secondario" onclick="mostraBacheca()">Annulla</button>
+          <button type="submit" class="btn btn-primario">Salva</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="schermata-dettagli" class="schermata">
+      <div class="dettaglio-header">
+        <button class="btn-indietro" onclick="mostraBacheca()">←</button>
+        <div class="dettaglio-titolo-container">
+          <h2 id="dettaglio-titolo" class="dettaglio-titolo-testo">Viaggio</h2>
+          <button class="btn btn-secondario btn-icona" onclick="modificaNomeViaggio()" title="Modifica nome">✏️</button>
+        </div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Date</div>
+        <div class="sezione-valore" id="dettaglio-date">—</div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">
+          <span>Budget</span>
+          <button class="btn btn-secondario btn-piccolo" onclick="modificaBudget()">Modifica</button>
+        </div>
+        <div id="budget-contenuto"></div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Spese</div>
+        <div id="spese-lista"></div>
+        <div class="form-spese">
+          <div class="form-spese-riga">
+            <input type="datetime-local" id="spesa-data" placeholder="Data e ora">
+            <input type="text" id="spesa-descrizione" placeholder="Descrizione">
+            <input type="number" id="spesa-importo" placeholder="€" step="0.01" min="0">
+            <select id="spesa-categoria">
+              <option value="">Categoria...</option>
+              <option value="Alloggio">Alloggio</option>
+              <option value="Colazione">Colazione</option>
+              <option value="Pranzo">Pranzo</option>
+              <option value="Cena">Cena</option>
+              <option value="Pedaggi">Pedaggi</option>
+              <option value="Benzina">Benzina</option>
+              <option value="Bar">Bar</option>
+              <option value="Attrazioni">Attrazioni</option>
+              <option value="Spese alimentari">Spese alimentari</option>
+              <option value="Altro">Altro</option>
+            </select>
+            <button class="btn btn-primario btn-piccolo" id="btn-salva-spesa" onclick="salvaSpesa()">＋ Aggiungi</button>
+          </div>
+          <div class="form-spese-riga" style="grid-template-columns: 1fr;">
+            <textarea id="spesa-note" placeholder="Note (opzionale)" style="min-height: 60px;"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">
+          <span>🗺️ Tappe</span>
+          <button class="btn btn-primario btn-piccolo" onclick="mostraFormTappa()">＋ Aggiungi</button>
+        </div>
+        <div id="tappe-lista"></div>
+        <div id="form-tappa-container"></div>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Note</div>
+        <textarea id="note-testo" placeholder="Scrivi qui i tuoi appunti..."></textarea>
+        <button class="btn btn-primario btn-pieno" style="margin-top: 14px;" onclick="salvaNote()">Salva note</button>
+      </div>
+
+      <div class="sezione">
+        <div class="sezione-titolo">Curiosità</div>
+        <div id="curiosita-lista"></div>
+        <div style="margin-top: 14px; display: flex; gap: 10px;">
+          <input type="text" id="curiosita-input" placeholder="Aggiungi una curiosità..." style="flex: 1;">
+          <button class="btn btn-primario btn-piccolo" onclick="aggiungiCuriosita()">＋</button>
+        </div>
+      </div>
+
+      <button class="btn btn-pericolo btn-pieno" onclick="eliminaViaggioCorrente()">Elimina questo viaggio</button>
+    </section>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script>
+    // ---------- STATO ----------
+    const CHIAVE = 'viaggiai_viaggi';
+    let viaggi = caricaViaggi();
+    let viaggioCorrenteId = null;
+    let tappaInModificaId = null;
+    let spesaInModificaId = null; // NUOVO: traccia la spesa in modifica
+
+    // ---------- STORAGE ----------
+    function caricaViaggi() {
+      try {
+        const dati = JSON.parse(localStorage.getItem(CHIAVE)) || [];
+        return dati.map(v => {
+          const tappeMigrate = (v.tappe || []).map(t => {
+            if (t.dataOraPartenza && t.dataOraArrivo) return t;
+            const dataOraPartenza = t.dataPartenza && t.oraPartenza ? `${t.dataPartenza}T${t.oraPartenza}` : (t.dataOraPartenza || '');
+            const dataOraArrivo = t.dataArrivo && t.oraArrivo ? `${t.dataArrivo}T${t.oraArrivo}` : (t.dataOraArrivo || '');
+            return { ...t, dataOraPartenza, dataOraArrivo };
+          });
+          // Migrazione spese: aggiunge dataOra se non presente
+          const speseMigrate = (v.spese || []).map(s => ({
+            ...s,
+            dataOra: s.dataOra || null
+          }));
+          return {
+            ...v,
+            budget: v.budget || 0,
+            spese: speseMigrate,
+            note: v.note || '',
+            curiosita: v.curiosita || [],
+            tappe: tappeMigrate
+          };
+        });
+      } catch {
+        return [];
+      }
+    }
+
+    function salvaViaggi() {
+      localStorage.setItem(CHIAVE, JSON.stringify(viaggi));
+    }
+
+    // ---------- TOAST ----------
+    let timeoutToast = null;
+    function mostraToast(messaggio) {
+      const toast = document.getElementById('toast');
+      toast.textContent = messaggio;
+      toast.classList.add('visibile');
+      if (timeoutToast) clearTimeout(timeoutToast);
+      timeoutToast = setTimeout(() => {
+        toast.classList.remove('visibile');
+        timeoutToast = null;
+      }, 2500);
+    }
+
+    // ---------- NAVIGAZIONE ----------
+    function mostraSchermata(id) {
+      document.querySelectorAll('.schermata').forEach(s => s.classList.remove('attiva'));
+      document.getElementById(id).classList.add('attiva');
+      window.scrollTo(0, 0);
+    }
+    function mostraBacheca() { renderLista(); mostraSchermata('schermata-bacheca'); }
+    function apriCreazione() { document.querySelector('form').reset(); mostraSchermata('schermata-creazione'); }
+
+    // ---------- RENDER LISTA ----------
+    function renderLista() {
+      const contenitore = document.getElementById('lista-viaggi');
+      if (viaggi.length === 0) {
+        contenitore.innerHTML = `
+          <div class="vuoto">
+            <div class="vuoto-emoji">🌍</div>
+            <div class="vuoto-titolo">Benvenuto in ViaggiAI</div>
+            <p class="vuoto-testo">La tua prossima avventura inizia qui.<br>Tocca il pulsante qui sopra per creare il tuo primo viaggio.</p>
+          </div>`;
+        return;
+      }
+      contenitore.innerHTML = viaggi
+        .slice().sort((a, b) => new Date(a.dataInizio) - new Date(b.dataInizio))
+        .map(v => `
+          <div class="cartolina" onclick="apriDettaglio(${v.id})">
+            <div class="cartolina-destinazione">${escapeHtml(v.destinazione)}</div>
+            <div class="cartolina-date">${formatoDate(v.dataInizio, v.dataFine)}</div>
+          </div>
+        `).join('');
+    }
+
+    // ---------- CREAZIONE ----------
+    function salvaViaggio(event) {
+      event.preventDefault();
+      const destinazione = document.getElementById('destinazione').value.trim();
+      const dataInizio = document.getElementById('data-inizio').value;
+      const dataFine = document.getElementById('data-fine').value;
+      if (new Date(dataFine) < new Date(dataInizio)) { alert('La data di ritorno deve essere successiva alla partenza.'); return; }
+      viaggi.push({
+        id: Date.now(), destinazione, dataInizio, dataFine,
+        budget: 0, spese: [], note: '', curiosita: [], tappe: [],
+        creatoIl: new Date().toISOString()
+      });
+      salvaViaggi();
+      mostraToast('Viaggio salvato! ✈️');
+      mostraBacheca();
+    }
+
+    // ---------- DETTAGLIO ----------
+    function apriDettaglio(id) {
+      const v = viaggi.find(x => x.id === id);
+      if (!v) return;
+      viaggioCorrenteId = id;
+      spesaInModificaId = null; // Reset spesa in modifica
+      document.getElementById('dettaglio-titolo').textContent = v.destinazione;
+      document.getElementById('dettaglio-date').textContent = formatoDate(v.dataInizio, v.dataFine);
+      document.getElementById('note-testo').value = v.note || '';
+      resetFormSpesa();
+      renderBudget(); 
+      renderSpese(); 
+      renderCuriosita(); 
+      renderTappe(); 
+      nascondiFormTappa();
+      mostraSchermata('schermata-dettagli');
+    }
+
+    function resetFormSpesa() {
+      document.getElementById('spesa-data').value = '';
+      document.getElementById('spesa-descrizione').value = '';
+      document.getElementById('spesa-importo').value = '';
+      document.getElementById('spesa-categoria').value = '';
+      document.getElementById('spesa-note').value = '';
+      document.getElementById('btn-salva-spesa').textContent = '＋ Aggiungi';
+      document.getElementById('btn-salva-spesa').onclick = salvaSpesa;
+      spesaInModificaId = null;
+    }
+
+    // NUOVO: Modifica nome viaggio
+    function modificaNomeViaggio() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const nuovoNome = prompt('Modifica il nome del viaggio:', v.destinazione);
+      if (nuovoNome === null) return; // Annullato
+      const nomeTrimmed = nuovoNome.trim();
+      if (!nomeTrimmed) {
+        alert('Il nome non può essere vuoto.');
+        return;
+      }
+      v.destinazione = nomeTrimmed;
+      salvaViaggi();
+      document.getElementById('dettaglio-titolo').textContent = nomeTrimmed;
+      renderLista(); // Aggiorna anche la lista nella bacheca
+      mostraToast('Nome aggiornato!');
+    }
+
+    function renderBudget() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const totaleSpeso = v.spese.reduce((sum, s) => sum + parseFloat(s.importo), 0);
+      const rimanente = v.budget - totaleSpeso;
+      const contenitore = document.getElementById('budget-contenuto');
+      if (v.budget === 0) {
+        contenitore.innerHTML = `<div class="vuoto-sezione">Budget non impostato.<br>Clicca "Modifica" per impostarlo.</div>`;
+        return;
+      }
+      contenitore.innerHTML = `
+        <div class="budget-griglia">
+          <div class="budget-item"><div class="budget-label">Budget</div><div class="budget-valore">€ ${v.budget.toFixed(2)}</div></div>
+          <div class="budget-item"><div class="budget-label">Speso</div><div class="budget-valore">€ ${totaleSpeso.toFixed(2)}</div></div>
+          <div class="budget-item"><div class="budget-label">Rimanente</div><div class="budget-valore ${rimanente < 0 ? 'negativo' : 'positivo'}">€ ${rimanente.toFixed(2)}</div></div>
+        </div>`;
+    }
+
+    function modificaBudget() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const nuovoBudget = prompt('Inserisci il budget totale (€):', v.budget || '');
+      if (nuovoBudget === null) return;
+      const importo = parseFloat(nuovoBudget);
+      if (isNaN(importo) || importo < 0) { alert('Inserisci un importo valido.'); return; }
+      v.budget = importo;
+      salvaViaggi(); renderBudget(); mostraToast('Budget aggiornato!');
+    }
+
+    function formatoDataOra(dataOra) {
+      if (!dataOra) return '';
+      const d = new Date(dataOra);
+      if (isNaN(d)) return dataOra;
+      const opt = { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+      return d.toLocaleString('it-IT', opt);
+    }
+
+    function renderSpese() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const contenitore = document.getElementById('spese-lista');
+      if (v.spese.length === 0) { contenitore.innerHTML = '<div class="vuoto-sezione">Nessuna spesa registrata.</div>'; return; }
+      
+      // Ordina per data (più recente prima)
+      const speseOrdinate = v.spese.slice().sort((a, b) => {
+        const dataA = a.dataOra ? new Date(a.dataOra) : new Date(0);
+        const dataB = b.dataOra ? new Date(b.dataOra) : new Date(0);
+        return dataB - dataA;
+      });
+      
+      contenitore.innerHTML = speseOrdinate.map(s => `
+        <div class="spesa-item">
+          <div class="spesa-header">
+            <div class="spesa-info">
+              <div class="spesa-descrizione">${escapeHtml(s.descrizione)}</div>
+              ${s.categoria ? `<div class="spesa-categoria">${escapeHtml(s.categoria)}</div>` : ''}
+              ${s.dataOra ? `<div class="spesa-data">📅 ${formatoDataOra(s.dataOra)}</div>` : ''}
+              <div class="spesa-importo">€ ${parseFloat(s.importo).toFixed(2)}</div>
+              ${s.note ? `<div class="spesa-note">${escapeHtml(s.note)}</div>` : ''}
+            </div>
+            <div class="spesa-azioni">
+              <button class="btn btn-secondario btn-piccolo" onclick="modificaSpesa(${s.id})" title="Modifica">✏️</button>
+              <button class="btn-elimina" onclick="eliminaSpesa(${s.id})" title="Elimina">×</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // MODIFICATO: ora gestisce sia creazione che modifica
+    function salvaSpesa() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      
+      const dataOra = document.getElementById('spesa-data').value;
+      const descrizione = document.getElementById('spesa-descrizione').value.trim();
+      const importo = document.getElementById('spesa-importo').value;
+      const categoria = document.getElementById('spesa-categoria').value;
+      const note = document.getElementById('spesa-note').value.trim();
+      
+      if (!descrizione || !importo) { alert('Inserisci almeno descrizione e importo.'); return; }
+      const importoNum = parseFloat(importo);
+      if (isNaN(importoNum) || importoNum <= 0) { alert('Inserisci un importo valido.'); return; }
+      
+      if (spesaInModificaId) {
+        // Modalità modifica
+        const idx = v.spese.findIndex(s => s.id === spesaInModificaId);
+        if (idx !== -1) {
+          v.spese[idx] = {
+            ...v.spese[idx],
+            dataOra: dataOra || null,
+            descrizione,
+            importo: importoNum,
+            categoria,
+            note
+          };
+        }
+        mostraToast('Spesa aggiornata!');
+      } else {
+        // Modalità creazione
+        v.spese.push({ 
+          id: Date.now(), 
+          dataOra: dataOra || null,
+          descrizione, 
+          importo: importoNum, 
+          categoria,
+          note
+        });
+        mostraToast('Spesa aggiunta!');
+      }
+      
+      salvaViaggi(); 
+      renderSpese(); 
+      renderBudget();
+      resetFormSpesa();
+    }
+
+    // NUOVO: Modifica spesa esistente
+    function modificaSpesa(id) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const s = v.spese.find(x => x.id === id);
+      if (!s) return;
+      
+      // Popola il form con i dati della spesa
+      document.getElementById('spesa-data').value = s.dataOra || '';
+      document.getElementById('spesa-descrizione').value = s.descrizione || '';
+      document.getElementById('spesa-importo').value = s.importo || '';
+      document.getElementById('spesa-categoria').value = s.categoria || '';
+      document.getElementById('spesa-note').value = s.note || '';
+      
+      // Cambia il pulsante in "Modifica"
+      const btn = document.getElementById('btn-salva-spesa');
+      btn.textContent = '✏️ Modifica';
+      
+      // Imposta l'ID della spesa in modifica
+      spesaInModificaId = id;
+      
+      // Scroll al form
+      document.querySelector('.form-spese').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function eliminaSpesa(id) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      if (!confirm('Eliminare questa spesa?')) return;
+      v.spese = v.spese.filter(s => s.id !== id);
+      salvaViaggi(); 
+      renderSpese(); 
+      renderBudget(); 
+      // Se stavo modificando questa spesa, resetto il form
+      if (spesaInModificaId === id) {
+        resetFormSpesa();
+      }
+      mostraToast('Spesa eliminata.');
+    }
+
+    function salvaNote() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      v.note = document.getElementById('note-testo').value;
+      salvaViaggi(); mostraToast('Note salvate!');
+    }
+
+    function renderCuriosita() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const contenitore = document.getElementById('curiosita-lista');
+      if (v.curiosita.length === 0) { contenitore.innerHTML = '<div class="vuoto-sezione">Nessuna curiosità aggiunta.</div>'; return; }
+      contenitore.innerHTML = v.curiosita.map(c => `
+        <div class="curiosita-item">
+          <div class="curiosita-testo">${escapeHtml(c.testo)}</div>
+          <button class="btn-elimina" onclick="eliminaCuriosita(${c.id})">×</button>
+        </div>
+      `).join('');
+    }
+
+    function aggiungiCuriosita() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const input = document.getElementById('curiosita-input');
+      const testo = input.value.trim();
+      if (!testo) { alert('Inserisci un testo.'); return; }
+      v.curiosita.push({ id: Date.now(), testo });
+      salvaViaggi(); renderCuriosita(); input.value = ''; mostraToast('Curiosità aggiunta!');
+    }
+
+    function eliminaCuriosita(id) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      if (!confirm('Eliminare questa curiosità?')) return;
+      v.curiosita = v.curiosita.filter(c => c.id !== id);
+      salvaViaggi(); renderCuriosita(); mostraToast('Curiosità eliminata.');
+    }
+
+    // MODIFICATO: Conferma più dettagliata per eliminazione viaggio
+    function eliminaViaggioCorrente() {
+      if (!viaggioCorrenteId) return;
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      
+      const numTappe = v.tappe ? v.tappe.length : 0;
+      const numSpese = v.spese ? v.spese.length : 0;
+      
+      let messaggioConferma = 'Sei sicuro di procedere con la cancellazione?\n';
+      messaggioConferma += `Viaggio: ${v.destinazione}\n`;
+      
+      if (numTappe > 0 || numSpese > 0) {
+        messaggioConferma += '\n⚠️ Verranno eliminati anche:\n';
+        if (numTappe > 0) messaggioConferma += `- ${numTappe} tappa/e\n`;
+        if (numSpese > 0) messaggioConferma += `- ${numSpese} spesa/e\n`;
+        messaggioConferma += '\nQuesta azione non può essere annullata.';
+      }
+      
+      if (!confirm(messaggioConferma)) return;
+      
+      viaggi = viaggi.filter(viaggio => viaggio.id !== viaggioCorrenteId);
+      salvaViaggi(); 
+      mostraBacheca();
+      mostraToast('Viaggio eliminato.');
+    }
+
+    // ---------- EXPORT ----------
+    function esportaViaggi() {
+      if (viaggi.length === 0) { mostraToast('Nessun viaggio da esportare.'); return; }
+      const contenuto = JSON.stringify(viaggi, null, 2);
+      const blob = new Blob([contenuto], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url; link.download = 'viaggiai-backup.json';
+      document.body.appendChild(link); link.click(); document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      mostraToast('Backup scaricato! 📥');
+    }
+
+    // ---------- IMPORT ----------
+    function importaViaggi(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      if (!file.name.endsWith('.json')) { mostraToast('Seleziona un file .json'); return; }
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const dati = JSON.parse(e.target.result);
+          if (!validaDatiImportati(dati)) { mostraToast('File non valido: formato errato.'); return; }
+          if (viaggi.length > 0) {
+            const conferma = confirm(`Stai per importare ${dati.length} viaggi. I viaggi attuali (${viaggi.length}) verranno sostituiti. Continuare?`);
+            if (!conferma) return;
+          }
+          viaggi = dati.map(v => ({
+            ...v, budget: v.budget || 0, spese: v.spese || [],
+            note: v.note || '', curiosita: v.curiosita || [], tappe: v.tappe || []
+          }));
+          salvaViaggi(); renderLista();
+          mostraToast(`${viaggi.length} viaggi importati! ✈️`);
+        } catch (err) { mostraToast('Errore nel leggere il file.'); console.error('Errore import:', err); }
+      };
+      reader.onerror = function() { mostraToast('Errore nel leggere il file.'); };
+      reader.readAsText(file);
+      event.target.value = '';
+    }
+
+    function validaDatiImportati(dati) {
+      if (!Array.isArray(dati)) return false;
+      for (const v of dati) {
+        if (typeof v.id !== 'number' || typeof v.destinazione !== 'string' ||
+            typeof v.dataInizio !== 'string' || typeof v.dataFine !== 'string') return false;
+      }
+      return true;
+    }
+
+    // ========== TAPPE ==========
+
+    function prossimoNumeroTappa() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v || v.tappe.length === 0) return 1;
+      const maxNum = Math.max(...v.tappe.map(t => parseInt(t.numero) || 0));
+      return Math.min(maxNum + 1, 99);
+    }
+
+    function calcolaDurata(dataOraPartenza, dataOraArrivo) {
+      if (!dataOraPartenza || !dataOraArrivo) return '';
+      const inizio = new Date(dataOraPartenza);
+      const fine = new Date(dataOraArrivo);
+      if (isNaN(inizio) || isNaN(fine) || fine <= inizio) return '';
+      const diffMs = fine - inizio;
+      const ore = Math.floor(diffMs / 3600000);
+      const minuti = Math.floor((diffMs % 3600000) / 60000);
+      return `${ore}h ${minuti}m`;
+    }
+
+    function formatNum(n) {
+      const num = parseFloat(n);
+      return isNaN(num) ? '0.00' : num.toFixed(2);
+    }
+
+    function renderTappe() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const contenitore = document.getElementById('tappe-lista');
+
+      if (v.tappe.length === 0) {
+        contenitore.innerHTML = '<div class="vuoto-sezione">Nessuna tappa registrata.</div>';
+        return;
+      }
+
+      contenitore.innerHTML = v.tappe
+        .slice().sort((a, b) => (parseInt(a.numero) || 0) - (parseInt(b.numero) || 0))
+        .map(t => {
+          const totaleViaggio = (parseFloat(t.benzina) || 0) + (parseFloat(t.autostrada) || 0);
+          const totaleAlloggio = (parseFloat(t.costoNotte) || 0) * (parseInt(t.numeroNotti) || 0);
+          const durata = t.durata || calcolaDurata(t.dataOraPartenza, t.dataOraArrivo);
+
+          return `
+            <div class="tappa-card">
+              <div class="tappa-header">
+                <div class="tappa-numero">Tappa ${escapeHtml(t.numero || '?')}</div>
+                <div style="display: flex; gap: 6px;">
+                  <button class="btn btn-secondario btn-piccolo" onclick="modificaTappa(${t.id})">✏️</button>
+                  <button class="btn-elimina" onclick="eliminaTappa(${t.id})">×</button>
+                </div>
+              </div>
+
+              <div class="tappa-griglia">
+                <div class="tappa-coppia">
+                  <div class="tappa-campo">
+                    <div class="tappa-label">Partenza</div>
+                    <div class="tappa-valore">${formatoDataOra(t.dataOraPartenza)}</div>
+                  </div>
+                  <div class="tappa-campo">
+                    <div class="tappa-label">Arrivo</div>
+                    <div class="tappa-valore">${formatoDataOra(t.dataOraArrivo)}</div>
+                  </div>
+                </div>
+
+                ${t.indirizzoPartenza || t.indirizzoArrivo ? `
+                  <div class="tappa-coppia">
+                    ${t.indirizzoPartenza ? `<div class="tappa-campo"><div class="tappa-label">📍 Da</div><div class="tappa-valore">${escapeHtml(t.indirizzoPartenza)}</div></div>` : ''}
+                    ${t.indirizzoArrivo ? `<div class="tappa-campo"><div class="tappa-label">📍 A</div><div class="tappa-valore">${escapeHtml(t.indirizzoArrivo)}</div></div>` : ''}
+                  </div>
+                  <button class="btn btn-secondario btn-pieno" style="margin-top: 8px;" onclick="apriMappa(${t.id})">🗺️ Apri percorso su mappa</button>
+                ` : ''}
+              </div>
+
+              <div class="tappa-separatore"></div>
+
+              <div class="tappa-quattro">
+                <div class="tappa-campo">
+                  <div class="tappa-label">Durata</div>
+                  <div class="tappa-valore evidenzia">${durata || '—'}</div>
+                </div>
+                <div class="tappa-campo">
+                  <div class="tappa-label">Distanza</div>
+                  <div class="tappa-valore">${t.distanza ? t.distanza + ' km' : '—'}</div>
+                </div>
+                <div class="tappa-campo">
+                  <div class="tappa-label">Benzina</div>
+                  <div class="tappa-valore">€ ${formatNum(t.benzina)}</div>
+                </div>
+                <div class="tappa-campo">
+                  <div class="tappa-label">Autostrada</div>
+                  <div class="tappa-valore">€ ${formatNum(t.autostrada)}</div>
+                </div>
+              </div>
+
+              <div class="tappa-campo" style="margin-top: 8px;">
+                <div class="tappa-label">Totale viaggio</div>
+                <div class="tappa-valore evidenzia">€ ${totaleViaggio.toFixed(2)}</div>
+              </div>
+
+              ${t.alloggioNome || totaleAlloggio > 0 ? `
+                <div class="tappa-separatore"></div>
+                <div class="tappa-griglia">
+                  <div class="tappa-campo">
+                    <div class="tappa-label">Alloggio</div>
+                    <div class="tappa-valore evidenzia">${escapeHtml(t.alloggioNome || '—')}${t.colazioneInclusa ? '<span class="tappa-badge">Colazione ✓</span>' : ''}</div>
+                  </div>
+                  <div class="tappa-coppia">
+                    <div class="tappa-campo">
+                      <div class="tappa-label">Costo/notte × notti</div>
+                      <div class="tappa-valore">€ ${formatNum(t.costoNotte)} × ${t.numeroNotti || 0}</div>
+                    </div>
+                    <div class="tappa-campo">
+                      <div class="tappa-label">Totale alloggio</div>
+                      <div class="tappa-valore evidenzia">€ ${totaleAlloggio.toFixed(2)}</div>
+                    </div>
+                  </div>
+                </div>
+              ` : ''}
+
+              ${t.note ? `
+                <div class="tappa-separatore"></div>
+                <div class="tappa-campo">
+                  <div class="tappa-label">Note</div>
+                  <div class="tappa-valore" style="white-space: pre-wrap;">${escapeHtml(t.note)}</div>
+                </div>
+              ` : ''}
+            </div>
+          `;
+        }).join('');
+    }
+
+    function mostraFormTappa() {
+      tappaInModificaId = null;
+      const container = document.getElementById('form-tappa-container');
+      container.innerHTML = generaFormTappaHTML();
+      container.style.display = 'block';
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function modificaTappa(id) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const t = v.tappe.find(x => x.id === id);
+      if (!t) return;
+      tappaInModificaId = id;
+      const container = document.getElementById('form-tappa-container');
+      container.innerHTML = generaFormTappaHTML(t);
+      container.style.display = 'block';
+      container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function nascondiFormTappa() {
+      const container = document.getElementById('form-tappa-container');
+      container.innerHTML = '';
+      container.style.display = 'none';
+      tappaInModificaId = null;
+    }
+
+    function generaFormTappaHTML(tappaEsistente) {
+      const t = tappaEsistente || {};
+      const numeroPredefinito = tappaEsistente ? t.numero : prossimoNumeroTappa();
+      const titolo = tappaEsistente ? 'Modifica tappa' : `Nuova tappa (n. ${numeroPredefinito})`;
+
+      return `
+        <div class="form-tappa">
+          <div class="form-tappa-titolo">${titolo}</div>
+
+          <div class="form-tappa-riga">
+            <div>
+              <label for="tappa-numero">Numero tappa</label>
+              <input type="number" id="tappa-numero" value="${escapeHtml(numeroPredefinito)}" min="1" max="99" style="max-width: 100px;">
+            </div>
+            <div>
+              <label for="tappa-data-ora-partenza">Data e ora di partenza</label>
+              <input type="datetime-local" id="tappa-data-ora-partenza" value="${t.dataOraPartenza || ''}">
+            </div>
+          </div>
+
+          <div class="form-tappa-riga" style="grid-template-columns: 1fr;">
+            <div>
+              <label for="tappa-indirizzo-partenza">Indirizzo di partenza</label>
+              <input type="text" id="tappa-indirizzo-partenza" value="${escapeHtml(t.indirizzoPartenza || '')}" placeholder="es. Barcellona, ES">
+            </div>
+          </div>
+
+          <div class="form-tappa-riga">
+            <div>
+              <label for="tappa-data-ora-arrivo">Data e ora di arrivo</label>
+              <input type="datetime-local" id="tappa-data-ora-arrivo" value="${t.dataOraArrivo || ''}">
+            </div>
+          </div>
+
+          <div class="form-tappa-riga" style="grid-template-columns: 1fr;">
+            <div>
+              <label for="tappa-indirizzo-arrivo">Indirizzo di arrivo</label>
+              <input type="text" id="tappa-indirizzo-arrivo" value="${escapeHtml(t.indirizzoArrivo || '')}" placeholder="es. Valencia, ES">
+            </div>
+          </div>
+
+          <div class="form-tappa-riga" style="grid-template-columns: repeat(4, 1fr);">
+            <div>
+              <label for="tappa-distanza">Distanza (km)</label>
+              <input type="number" id="tappa-distanza" value="${t.distanza || ''}" placeholder="es. 337" min="0" step="0.1">
+            </div>
+            <div>
+              <label for="tappa-durata">Durata</label>
+              <input type="text" id="tappa-durata" value="${escapeHtml(t.durata || '')}" placeholder="auto">
+            </div>
+            <div>
+              <label for="tappa-benzina">Benzina (€)</label>
+              <input type="number" id="tappa-benzina" value="${t.benzina || ''}" step="0.01" min="0" placeholder="0.00">
+            </div>
+            <div>
+              <label for="tappa-autostrada">Autostrada (€)</label>
+              <input type="number" id="tappa-autostrada" value="${t.autostrada || ''}" step="0.01" min="0" placeholder="0.00">
+            </div>
+          </div>
+
+          <div class="form-tappa-riga">
+            <div>
+              <label for="tappa-alloggio">Alloggio</label>
+              <input type="text" id="tappa-alloggio" value="${escapeHtml(t.alloggioNome || '')}" placeholder="es. Hotel Albufera">
+            </div>
+            <div>
+              <label for="tappa-costo-notte">Costo/notte (€)</label>
+              <input type="number" id="tappa-costo-notte" value="${t.costoNotte || ''}" step="0.01" min="0" placeholder="0.00">
+            </div>
+            <div>
+              <label for="tappa-numero-notti">Numero notti</label>
+              <input type="number" id="tappa-numero-notti" value="${t.numeroNotti || ''}" min="0" step="1" placeholder="0">
+            </div>
+            <div class="checkbox-container" style="align-self: end; padding-bottom: 12px;">
+              <input type="checkbox" id="tappa-colazione" ${t.colazioneInclusa ? 'checked' : ''}>
+              <label for="tappa-colazione">Colazione</label>
+            </div>
+          </div>
+
+          <div class="form-tappa-riga" style="grid-template-columns: 1fr;">
+            <div>
+              <label for="tappa-note">Note</label>
+              <textarea id="tappa-note" placeholder="Appunti, dettagli, link...">${escapeHtml(t.note || '')}</textarea>
+            </div>
+          </div>
+
+          <div class="form-tappa-azioni">
+            <button type="button" class="btn btn-secondario" onclick="nascondiFormTappa()">Annulla</button>
+            <button type="button" class="btn btn-primario" onclick="salvaTappa()">Salva tappa</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function salvaTappa() {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+
+      const numero = document.getElementById('tappa-numero').value.trim();
+      const dataOraPartenza = document.getElementById('tappa-data-ora-partenza').value;
+      const dataOraArrivo = document.getElementById('tappa-data-ora-arrivo').value;
+      const indirizzoPartenza = document.getElementById('tappa-indirizzo-partenza').value.trim();
+      const indirizzoArrivo = document.getElementById('tappa-indirizzo-arrivo').value.trim();
+      const distanza = document.getElementById('tappa-distanza').value;
+      const durataManuale = document.getElementById('tappa-durata').value.trim();
+      const benzina = document.getElementById('tappa-benzina').value;
+      const autostrada = document.getElementById('tappa-autostrada').value;
+      const alloggioNome = document.getElementById('tappa-alloggio').value.trim();
+      const costoNotte = document.getElementById('tappa-costo-notte').value;
+      const numeroNotti = document.getElementById('tappa-numero-notti').value;
+      const colazioneInclusa = document.getElementById('tappa-colazione').checked;
+      const note = document.getElementById('tappa-note').value.trim();
+
+      if (!numero) { alert('Inserisci il numero della tappa.'); return; }
+      const num = parseInt(numero);
+      if (isNaN(num) || num < 1 || num > 99) { alert('Il numero deve essere tra 1 e 99.'); return; }
+
+      const durata = durataManuale || calcolaDurata(dataOraPartenza, dataOraArrivo);
+
+      const tappa = {
+        id: tappaInModificaId || Date.now(),
+        numero,
+        dataOraPartenza, dataOraArrivo,
+        indirizzoPartenza, indirizzoArrivo,
+        durata,
+        distanza: distanza ? parseFloat(distanza) : 0,
+        benzina: benzina ? parseFloat(benzina) : 0,
+        autostrada: autostrada ? parseFloat(autostrada) : 0,
+        alloggioNome,
+        costoNotte: costoNotte ? parseFloat(costoNotte) : 0,
+        numeroNotti: numeroNotti ? parseInt(numeroNotti) : 0,
+        colazioneInclusa,
+        note
+      };
+
+      if (tappaInModificaId) {
+        const idx = v.tappe.findIndex(x => x.id === tappaInModificaId);
+        if (idx !== -1) v.tappe[idx] = tappa;
+      } else {
+        v.tappe.push(tappa);
+      }
+
+      salvaViaggi();
+      renderTappe();
+      nascondiFormTappa();
+      mostraToast(tappaInModificaId ? 'Tappa aggiornata!' : 'Tappa aggiunta!');
+    }
+
+    function eliminaTappa(id) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      if (!confirm('Eliminare questa tappa?')) return;
+      v.tappe = v.tappe.filter(t => t.id !== id);
+      salvaViaggi(); renderTappe(); mostraToast('Tappa eliminata.');
+    }
+
+    function apriMappa(tappaId) {
+      const v = viaggi.find(x => x.id === viaggioCorrenteId);
+      if (!v) return;
+      const t = v.tappe.find(x => x.id === tappaId);
+      if (!t) return;
+      if (!t.indirizzoPartenza && !t.indirizzoArrivo) { mostraToast('Inserisci almeno un indirizzo.'); return; }
+      let url = 'https://www.google.com/maps/dir/?api=1';
+      if (t.indirizzoPartenza) url += '&origin=' + encodeURIComponent(t.indirizzoPartenza);
+      if (t.indirizzoArrivo) url += '&destination=' + encodeURIComponent(t.indirizzoArrivo);
+      url += '&travelmode=driving';
+      window.open(url, '_blank');
+    }
+
+    // ---------- UTILITÀ ----------
+    function formatoDate(inizio, fine) {
+      const opt = { day: 'numeric', month: 'short', year: 'numeric' };
+      const i = new Date(inizio).toLocaleDateString('it-IT', opt);
+      const f = new Date(fine).toLocaleDateString('it-IT', opt);
+      return `${i} → ${f}`;
+    }
+
+    function escapeHtml(str) {
+      if (str == null) return '';
+      const div = document.createElement('div');
+      div.textContent = String(str);
+      return div.innerHTML;
+    }
+
+    // ---------- AVVIO ----------
+    renderLista();
+  </script>
+</body>
+</html>      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 24px; padding-bottom: 16px;
+      border-bottom: 2px solid var(--bordo);
+    }
+
+    h1 { font-size: 1.8rem; color: var(--primario); }
+
+    .schermata { display: none; }
+    .schermata.attiva { display: block; }
+
+    .btn {
+      padding: 14px 24px; border: none; border-radius: 12px;
+      font-size: 1rem; cursor: pointer; font-weight: 500;
+      transition: transform 0.1s; min-height: 48px;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primario { background: var(--primario); color: white; }
+    .btn-secondario { background: var(--bordo); color: var(--testo); }
+    .btn-pericolo { background: transparent; color: var(--pericolo); border: 2px solid var(--pericolo); }
+    .btn-pieno { width: 100%; }
+    .btn-piccolo { padding: 10px 16px; font-size: 0.9rem; min-height: 40px; }
 
     .azione-principale { margin-bottom: 12px; }
     .azione-backup { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
