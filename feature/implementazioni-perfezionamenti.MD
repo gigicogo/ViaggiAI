@@ -5,7 +5,6 @@ In questo caso inserirò solo i prompt, senza le risposte di Qwen.
 I risultati saranno visibili scaricando il codice html dell'app nella versione finale
 
 
-1
 
 
 Agisci come sviluppatore front-end incaricato di estendere la mia app di pianificazione viaggi (ViaggiAI) aggiungendo una nuova sezione chiamata **"TAPPE"**.
