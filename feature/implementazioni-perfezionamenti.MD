@@ -6,38 +6,37 @@ I risultati saranno visibili scaricando il codice html dell'app nella versione f
 
 
 
+> Agisci come sviluppatore front-end incaricato di estendere la mia app di pianificazione viaggi (ViaggiAI) aggiungendo una nuova sezione chiamata **"TAPPE"**.
+> 
+>  ### Contesto
+>  - L’app è una single-page in HTML/CSS/JS (senza backend).
+>  - È pensata per funzionare bene su mobile, tablet e desktop.
+>  - Mantieni lo stile, i colori, i font e il comportamento responsive già presenti nell’app.
+>  - Non rimuovere o rompere le funzionalità esistenti (budget, spese, esportazione/importazione, ecc.).
 
-Agisci come sviluppatore front-end incaricato di estendere la mia app di pianificazione viaggi (ViaggiAI) aggiungendo una nuova sezione chiamata **"TAPPE"**.
+>  ### Obiettivo
+>  Aggiungere una sezione **TAPPE** che mi permetta di descrivere in modo strutturato le singole tappe di un viaggio, partendo dal tipo di informazioni che oggi compilo a mano nelle note (esempio: “Partenza ore 17.00 – Barcellona–Valencia 337 km… 3 notti presso Hotel Albufera… pagato con CC TRADEREPUBLIC…”).
+>  
+>  Ogni **tappa** deve avere questi campi:
 
-### Contesto
-- L’app è una single-page in HTML/CSS/JS (senza backend).
-- È pensata per funzionare bene su mobile, tablet e desktop.
-- Mantieni lo stile, i colori, i font e il comportamento responsive già presenti nell’app.
-- Non rimuovere o rompere le funzionalità esistenti (budget, spese, esportazione/importazione, ecc.).
-
-### Obiettivo
-Aggiungere una sezione **TAPPE** che mi permetta di descrivere in modo strutturato le singole tappe di un viaggio, partendo dal tipo di informazioni che oggi compilo a mano nelle note (esempio: “Partenza ore 17.00 – Barcellona–Valencia 337 km… 3 notti presso Hotel Albufera… pagato con CC TRADEREPUBLIC…”).
-
-Ogni **tappa** deve avere questi campi:
-
-1. **Numero della tappa**  
-   - Campo numerico o testo breve: es. “1”, “2”, “3”, oppure “Tappa 1”.
-
-2. **Date e orari**  
-   - Giorno e ora di partenza della tappa (es. `data_partenza`, `ora_partenza`).  
-   - Giorno e ora di arrivo della tappa (es. `data_arrivo`, `ora_arrivo`).
-
-3. **Durata della tappa**  
-   - Campo calcolato o compilato a mano con durata in **ore e minuti**  
-     (es. “3h 30m”).
-
-4. **Distanza percorsa**  
-   - Campo numerico per i **chilometri** percorsi (es. “337 km”).
-
-5. **Costi di viaggio (tappa)**  
-   - Costo **benzina** per la tappa.  
-   - Costo **autostrada/pedaggi** per la tappa.  
-   - Se possibile, un campo “Totale costi viaggio tappa” (benzina + autostrada).
+>  1. **Numero della tappa**  
+>     - Campo numerico o testo breve: es. “1”, “2”, “3”, oppure “Tappa 1”.
+>  
+>  2. **Date e orari**  
+>     - Giorno e ora di partenza della tappa (es. `data_partenza`, `ora_partenza`).  
+>     - Giorno e ora di arrivo della tappa (es. `data_arrivo`, `ora_arrivo`).
+>  
+>  3. **Durata della tappa**  
+>     - Campo calcolato o compilato a mano con durata in **ore e minuti**  
+>       (es. “3h 30m”).
+>  
+>  4. **Distanza percorsa**  
+>     - Campo numerico per i **chilometri** percorsi (es. “337 km”).
+>  
+>  5. **Costi di viaggio (tappa)**  
+>     - Costo **benzina** per la tappa.  
+>     - Costo **autostrada/pedaggi** per la tappa.  
+>     - Se possibile, un campo “Totale costi viaggio tappa” (benzina + autostrada).
 
 6. **Accommodation (alloggio)**  
    - Nome/accomodation scelta (es. “Hotel Albufera”).  
