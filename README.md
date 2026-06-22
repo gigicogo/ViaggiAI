@@ -3,6 +3,9 @@
 Benvenuto nel mio piccolo laboratorio pubblico di *vibe coding* per costruire, insieme all’AI, un’app di viaggio personale.  
 Questo repository non è pensato per programmatori esperti, ma per persone curiose che vogliono vedere “dietro le quinte” di un progetto fatto a colpi di idee, prompt e iterazioni con l’Intelligenza Artificiale.
 
+<img width="1448" height="1086" alt="ChatGPT Image 22 giu 2026, 16_58_06" src="https://github.com/user-attachments/assets/2cae2500-fe38-4893-ba46-bacf76cc49e5" />
+
+
 ---
 
 ## Cos’è questo progetto
