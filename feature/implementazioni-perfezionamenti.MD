@@ -13,7 +13,7 @@ I risultati saranno visibili scaricando il codice html dell'app nella versione f
 >  - È pensata per funzionare bene su mobile, tablet e desktop.
 >  - Mantieni lo stile, i colori, i font e il comportamento responsive già presenti nell’app.
 >  - Non rimuovere o rompere le funzionalità esistenti (budget, spese, esportazione/importazione, ecc.).
->  
+>   
 >  ### Obiettivo
 >  Aggiungere una sezione **TAPPE** che mi permetta di descrivere in modo strutturato le singole tappe di un viaggio, partendo dal tipo di informazioni che oggi compilo a mano nelle note (esempio: “Partenza ore 17.00 – Barcellona–Valencia 337 km… 3 notti presso Hotel Albufera… pagato con CC TRADEREPUBLIC…”).
 >  
