@@ -39,7 +39,7 @@ Puoi immaginarlo come:
 
 - una cartella su internet,  
 - con un “registro” che ricorda chi ha cambiato cosa e quando,  
-- e una pagina iniziale (questo `README.md`) che racconta a cosa serve il progetto.[web:89]
+- e una pagina iniziale (questo `README.md`) che racconta a cosa serve il progetto.
 
 Anche se nasce per sviluppatori, lo uso qui come **laboratorio aperto**:
 
