@@ -35,22 +35,6 @@ In questo progetto vedrai:
 
 ---
 
-## Perché ho scelto GitHub
-
-**GitHub** è un sito dove le persone tengono online i file dei loro progetti e la storia delle modifiche nel tempo.
-Puoi immaginarlo come:
-
-- una cartella su internet,  
-- con un “registro” che ricorda chi ha cambiato cosa e quando,  
-- e una pagina iniziale (questo `README.md`) che racconta a cosa serve il progetto.
-
-Anche se nasce per sviluppatori, lo uso qui come **laboratorio aperto**:
-
-- per raccogliere idee, prompt e risultati,  
-- per mostrare ogni fase del lavoro, non solo la demo finale,  
-- per permettere ad altri di leggere, copiare, modificare o riusare il metodo.  
-
----
 
 ## Come è organizzato questo laboratorio
 
@@ -82,7 +66,7 @@ Nel tempo potranno comparire altre cartelle (es. `docs/`, `demo/`) se il progett
 
 ---
 
-## Come usare questo repository
+## Come usare questo repo
 
 Puoi usare questo repo in diversi modi:
 
