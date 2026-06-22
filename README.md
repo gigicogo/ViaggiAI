@@ -66,14 +66,14 @@ Le parti principali sono:
   - `03-interfaccia-principale.md` – prompt per far costruire all’AI le schermate principali.  
   - `ecc.
  
-  - `feature/`  
-  Screenshot, link e appunti brevi sui risultati ottenuti: “prima versione”, “versione migliorata”, “cosa ha funzionato / cosa no”.
+- `feature/`  
+  Qui inserirò i prompt che ho usato per aggiungere funzionalità aggiuntive.
 
 - `app-html/`  
   Le versioni con il codice sorgente che puoi scaricare e migliorare a modo tuo”.
 
 - `output/`  
-  Screenshot, link e appunti brevi sui risultati ottenuti: “prima versione”, “versione migliorata”, “cosa ha funzionato / cosa no”.
+  Screenshot, link e appunti brevi.
 
 Nel tempo potranno comparire altre cartelle (es. `docs/`, `demo/`) se il progetto cresce o se servirà una versione dimostrativa.
 
