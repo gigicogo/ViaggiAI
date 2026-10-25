@@ -1,92 +1,129 @@
-# Vibe Coding Travel Planner – Laboratorio aperto
+# 🧳 ViaggiAI — Laboratorio aperto di Vibe Coding
 
-Benvenuto nel mio piccolo laboratorio pubblico di *vibe coding* per costruire, insieme all’AI, un’app di viaggio personale.  
-Questo repository non è pensato per programmatori esperti, ma per persone curiose che vogliono vedere “dietro le quinte” di un progetto fatto a colpi di idee, prompt e iterazioni con l’Intelligenza Artificiale.
+Benvenuto in **ViaggiAI**, un laboratorio pubblico per costruire — passo dopo passo e insieme all’AI — un’app di viaggio personale.
+
+Questo repository non mostra soltanto il risultato finale: documenta il **percorso di vibe coding**, dalle prime idee ai prompt, dalle iterazioni alle versioni dell’app.
+
+🔗 **App online:** [viaggi-ai.vercel.app](https://viaggi-ai.vercel.app)
+
+<!-- ⚠️ MANTIENI QUI LA FOTO ESISTENTE DEL README ORIGINALE -->
+<!-- Sostituisci questa riga con il codice immagine già presente nel tuo README,
+     per esempio: ![ViaggiAI](percorso-o-url-della-tua-immagine) -->
+
+## 🎯 L’idea
+
+L’idea di partenza è semplice:
+
+> Creare un “taccuino di viaggio intelligente”: un’app web e mobile dove raccogliere destinazioni, percorsi, curiosità, recensioni, budget e costi. L’obiettivo è trasformare pensieri sparsi in un piano di viaggio chiaro, personale e facile da consultare.
+
+ViaggiAI nasce come progetto divulgativo e didattico: vuole mostrare come un’idea possa diventare un prodotto digitale attraverso conversazioni, prompt e revisioni progressive con l’AI generativa.
+
+## 🤖 Cos’è il vibe coding
+
+Nel *vibe coding* non si parte dal codice: si parte dalle parole.
+
+Si descrive ciò che si vuole ottenere in linguaggio naturale e si chiede all’AI di tradurre quella visione in schermate, flussi, funzionalità e codice. Poi si testa, si corregge e si ripete.
+
+In questo laboratorio troverai:
+
+- Prompt scritti in italiano, senza gergo tecnico inutile.
+- Iterazioni e correzioni successive.
+- Versioni dell’app costruite gradualmente.
+- Un esempio concreto di come l’AI possa supportare la prototipazione.
+
+## 🗂️ Come è organizzato il repository
+
+Il repository è pensato per essere leggibile anche da chi non programma.
+
+| Cartella | Contenuto |
+|---|---|
+| `idea/` | La fase iniziale: la “vibe”, l’idea e la scelta degli strumenti. |
+| `prompts/` | I prompt usati per pianificare il progetto e costruire le interfacce. |
+| `feature/` | Prompt e materiali per aggiungere nuove funzionalità. |
+| `app-html/` | Versioni dell’app con codice sorgente scaricabile e modificabile. |
+| `output/` | Screenshot, link, appunti e materiali di supporto. |
+| `.github/workflows/` | Automazioni GitHub, se presenti. |
+
+### Prompt principali
+
+Alcuni file utili per capire il metodo di lavoro:
+
+- `prompts/02-milestone-progetto.md` — per dividere il progetto in tappe gestibili.
+- `prompts/03-interfaccia-principale.md` — per costruire le schermate principali.
+- `prompts/` — per esplorare tutti gli altri prompt e le iterazioni.
+
+## 🚀 Come usare questo progetto
+
+Puoi usare ViaggiAI in tre modi:
+
+- **Come esempio pratico** di workflow di vibe coding applicato a un’app reale.
+- **Come modello riutilizzabile**, copiando la struttura di cartelle e adattandola a un’altra idea.
+- **Come archivio di prompt**, per capire come un’idea evolve attraverso richieste e correzioni.
+
+Non servono competenze tecniche avanzate: i file principali sono in Markdown e possono essere letti direttamente nel browser.
+
+## 🧭 Il percorso del progetto
+
+Il progetto avanza per fasi:
+
+1. **Fase 0 — La vibe:** nasce l’idea e si definisce lo scopo dell’app.
+2. **Fase 1 — Il laboratorio:** si scelgono strumenti, approccio e modalità di lavoro.
+3. **Fase 2 — Progettazione:** l’AI aiuta a trasformare l’idea in schermate e funzioni.
+4. **Fase 3 — Sviluppo iterativo:** si aggiungono funzionalità, si correggono errori e si migliorano le interfacce.
+5. **Fase 4 — Pubblicazione:** l’app diventa accessibile online.
+
+## 🛠️ Stack e strumenti
+
+| Area | Strumenti |
+|---|---|
+| Metodo | Vibe coding e prompt engineering |
+| Sviluppo | HTML, CSS, JavaScript |
+| AI | Modelli di AI generativa |
+| Pubblicazione | Vercel |
+| Documentazione | GitHub e Markdown |
+
+## 🧪 Possibili evoluzioni
+
+Alcune direzioni future del progetto:
+
+- Salvataggio dei viaggi nel browser.
+- Aggiunta di budget, spese e liste di cose da fare.
+- Suggerimenti di itinerari in base agli interessi dell’utente.
+- Integrazione con mappe e punti di interesse.
+- Esportazione del piano di viaggio in PDF o Markdown.
+- Versione mobile ottimizzata.
+
+## 🤝 Riuso e contributi
+
+Se il progetto ti ispira:
+
+- usa i prompt come base per i tuoi esperimenti;
+- adatta l’idea del “taccuino di viaggio intelligente” alle tue esigenze;
+- crea un tuo repository simile e documenta il tuo percorso;
+- apri una Issue se vuoi suggerire un miglioramento o segnalare un problema.
+
+L’obiettivo non è solo costruire un’app, ma mostrare un modo più umano, narrativo e iterativo di usare l’AI per progettare strumenti digitali.
+
+## ⚠️ Note
+
+ViaggiAI è un progetto sperimentale a finalità divulgativa e didattica. Le funzionalità, i contenuti e le risposte generate dall’AI possono contenere imprecisioni: verifica sempre le informazioni importanti prima di usarle per pianificare un viaggio.
+
+## 📄 Licenza
+
+Questo progetto è distribuito con licenza [MIT](LICENSE).
+
+## 👤 Autore
+
+Creato da **Gianluigi Cogo** ([@gigicogo](https://github.com/gigicogo)).  
+Content creator e technical writer interessato ad AI generativa, automazioni, viaggi e strumenti digitali.
+
+
+
+
 
 <img width="1448" height="1086" alt="ChatGPT Image 22 giu 2026, 16_58_06" src="https://github.com/user-attachments/assets/2cae2500-fe38-4893-ba46-bacf76cc49e5" />
 
 
----
-
-## Cos’è questo progetto
-
-L’idea di partenza è semplice:
-
-> Un’app web e mobile come un “taccuino di viaggio intelligente”: una applicazione dove posso raccogliere in un unico posto tutte le idee per i miei viaggi di piacere (destinazioni, percorsi, curiosità, recensioni, budget e costi) con l’obiettivo di trasformare pensieri sparsi in un piano di viaggio chiaro e facile da consultare.
-
-In questo repository documento **il percorso**, non solo il risultato finale:
-
-- Come nasce l’idea (fase 0: la “vibe”).  
-- Come scelgo il “laboratorio” in cui lavorare (fase 1).  
-- Come uso l’AI per trasformare l’idea in pagine, funzioni e interfacce.  
-
----
-
-## Cos’è il vibe coding (in pratica)
-
-Nel *vibe coding* non parti dal codice, ma dalle parole.  
-Descrivi cosa vuoi ottenere in linguaggio naturale e chiedi all’AI di trasformare quella descrizione in schermate, flussi e, quando serve, codice funzionante.
-
-In questo progetto vedrai:
-
-- Prompt scritti in italiano “normale”.  
-- Risposte dell’AI, con successivi aggiustamenti.  
-- Piccoli passi che, messi in fila, costruiscono l’app di viaggio.  
-
----
-
-
-## Come è organizzato questo laboratorio
-
-Il repository è pensato per essere leggibile anche da chi non programma.  
-Le parti principali sono:
-
-- `README.md`  
-  Questa pagina: la storia del progetto, l’idea di base e come muoversi nel repo.
-
-- `idea/`  
-  Testi brevi che descrivono la fase 0 (la “vibe”) e la fase 1 (scelta degli strumenti e del laboratorio mentale).
-
-- `prompts/`  
-  Qui salvo i prompt usati nelle varie fasi, ad esempio:
-  - `02-milestone-progetto.md` – prompt per dividere il progetto in tappe semplici.  
-  - `03-interfaccia-principale.md` – prompt per far costruire all’AI le schermate principali.  
-  - `ecc.
- 
-- `feature/`  
-  Qui inserirò i prompt che ho usato per aggiungere funzionalità aggiuntive.
-
-- `app-html/`  
-  Le versioni con il codice sorgente che puoi scaricare e migliorare a modo tuo”.
-
-- `output/`  
-  Screenshot, link e appunti brevi.
-
-Nel tempo potranno comparire altre cartelle (es. `docs/`, `demo/`) se il progetto cresce o se servirà una versione dimostrativa.
-
----
-
-## Come usare questo repo
-
-Puoi usare questo repo in diversi modi:
-
-- Come **esempio di workflow** di vibe coding per un’app concreta (un travel planner personale).  
-- Come **modello**: puoi copiare la struttura delle cartelle e adattarla a una tua idea (non deve essere per forza un’app di viaggi).  
-- Come **archivio di prompt**: puoi leggere i prompt, capire come vengono raffinati e usarli come base per i tuoi esperimenti.
-
-Non servono competenze tecniche particolari per leggere i file: sono tutti in testo semplice (`.md`, Markdown) e puoi aprirli direttamente dal browser.
-
----
-
-## Domande, idee, riuso
-
-Se questo laboratorio ti è utile:
-
-- puoi usare i prompt come ispirazione per i tuoi progetti,  
-- puoi adattare l’idea del “taccuino di viaggio intelligente” alle tue esigenze,  
-- puoi creare un tuo repository simile e raccontare il tuo percorso di vibe coding.
-
-L’obiettivo non è solo costruire un’app, ma mostrare un modo più umano, narrativo e iterativo di usare l’AI per progettare e costruire strumenti digitali.
 
 ## 📄 Licenza
 
