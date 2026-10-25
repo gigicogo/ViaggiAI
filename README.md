@@ -6,9 +6,7 @@ Questo repository non mostra soltanto il risultato finale: documenta il **percor
 
 🔗 **App online:** [viaggi-ai.vercel.app](https://viaggi-ai.vercel.app)
 
-<!-- ⚠️ MANTIENI QUI LA FOTO ESISTENTE DEL README ORIGINALE -->
-<!-- Sostituisci questa riga con il codice immagine già presente nel tuo README,
-     per esempio: ![ViaggiAI](percorso-o-url-della-tua-immagine) -->
+<img width="1448" height="1086" alt="ChatGPT Image 22 giu 2026, 16_58_06" src="https://github.com/user-attachments/assets/2cae2500-fe38-4893-ba46-bacf76cc49e5" />
 
 ## 🎯 L’idea
 
@@ -110,28 +108,12 @@ ViaggiAI è un progetto sperimentale a finalità divulgativa e didattica. Le fun
 
 ## 📄 Licenza
 
-Questo progetto è distribuito con licenza [MIT](LICENSE).
-
-## 👤 Autore
-
-Creato da **Gianluigi Cogo** ([@gigicogo](https://github.com/gigicogo)).  
-Content creator e technical writer interessato ad AI generativa, automazioni, viaggi e strumenti digitali.
-
-
-
-
-
-<img width="1448" height="1086" alt="ChatGPT Image 22 giu 2026, 16_58_06" src="https://github.com/user-attachments/assets/2cae2500-fe38-4893-ba46-bacf76cc49e5" />
-
-
-
-## 📄 Licenza
-
 Da definire: si suggerisce una licenza aperta (es. MIT o CC BY 4.0) per favorire il riuso da parte di altri. Sostituisci questo paragrafo con il testo della licenza scelta e il file `LICENSE` del repo.
+
 
 ## 👤 Autore e contesto
 
-**Gianluigi Cogo** — consulente e docente sui temi dell'IA generativa nella Pubblica Amministrazione.
+**Gianluigi Cogo** — Content creator e technical writer interessato ad AI generativa, automazioni, viaggi e strumenti digitali. Consulente e docente sui temi dell'IA generativa nella Pubblica Amministrazione.
 
 - 📮 Newsletter: [gigicogo.substack.com](https://gigicogo.substack.com)
 - 📝 Blog: [medium.com/webeconoscenza](https://medium.com/webeconoscenza)
